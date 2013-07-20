@@ -1,0 +1,17 @@
+.smex-items
+backups/
+elpa/
+places
+*~
+#*
+*#
+swank/
+ac-comphist.dat
+ac-dict/
+cha1tanya
+repl-port
+var/
+tmp/
+url/
+emms/
+eshell/
