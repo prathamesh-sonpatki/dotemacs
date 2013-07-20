@@ -1,13 +1,63 @@
-;; Marmalade configuration
+(setq load-path (cons "~/.emacs.d" load-path))
+(require 'auto-package)
 
-(require 'package)
-(add-to-list 'package-archives
-  '("marmalade" . "http://marmalade-repo.org/packages/"))
+(defvar my-packages '(melpa
 
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+                      starter-kit
+                      starter-kit-lisp
+                      starter-kit-bindings
+                      starter-kit-eshell
+                      textmate
+                      ;; themes
+                      color-theme-sanityinc-solarized
+                      molokai-theme
 
-(package-initialize)
+                      ;; clojure
+                      clojure-mode
+                      clojure-test-mode
+
+                      clojurescript-mode
+
+                      ;; ruby
+                      rinari
+                      rspec-mode
+
+                      ;; js
+                      js2-mode
+                      coffee-mode
+
+                      ;; markup
+                      haml-mode
+                      less-css-mode
+                      sass-mode
+                      scss-mode
+                      markdown-mode
+
+                      ;; flymake
+                      flymake-shell
+                      flymake-ruby
+                      flymake-haml
+                      flymake-css
+
+                      ;; navigation
+                      ack-and-a-half
+                      ascope
+
+                      ;; editing
+                      auto-complete
+                      smooth-scrolling
+                      browse-kill-ring
+                      undo-tree
+                      yasnippet
+
+                      ;; utils
+                      magit
+                      melpa
+                      todochiku
+                      multiple-cursors
+                      paredit)
+
+  "A list of packages to ensure are installed at launch.")
 
 ;; Custom Font - Monaco
 
