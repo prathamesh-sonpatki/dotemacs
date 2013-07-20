@@ -45,6 +45,7 @@
 
                       ;; editing
                       auto-complete
+                      auto-complete-config
                       smooth-scrolling
                       browse-kill-ring
                       undo-tree
@@ -55,7 +56,9 @@
                       melpa
                       todochiku
                       multiple-cursors
-                      paredit)
+                      paredit
+                      multi-term
+                      )
 
   "A list of packages to ensure are installed at launch.")
 
@@ -180,24 +183,6 @@
 (add-hook 'emacs-lisp-mode-hool
           (lambda () (paredit-mode +1)))
 
-;; Enable paredit mode
-
-(require 'paredit)
-
-;; Rcodetools
-(add-to-list 'load-path "/home/cha1tanya/.emacs.d/elpa/rcodetools")
-(require 'rcodetools)
-(require 'anything)
-;; (require 'icicles-rcodetools)
-(require 'anything-rcodetools)
-;; (describe-function 'xmp)
-;; (describe-function 'comment-dwim)
-;; (describe-function 'rct-complete-symbol)
-;; (describe-function 'rct-ri)
-;; (describe-variable 'rct-find-tag-if-available)
-;; (describe-function 'rct-fork)
-;; (describe-function 'rct-fork-kill)
-
 (defun coffee-custom ()
   "coffee-mode-hook"
   (set (make-local-variable 'tab-width) 2))
@@ -215,39 +200,11 @@
 
 (add-hook 'shell-mode-hook '(lambda () (setq show-trailing-whitespace nil)))
 
-
-(require 'yasnippet)
-(setq yas-snippet-dirs
-      '("~/.emacs.d/snippets"                         ;; personal snippets
-        "~/.emacs.d/elpa/yasnippet-0.8.0/snippets"    ;; the default collection
-        ))
-(yas-global-mode 1)
-
 ;; Python
 
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:setup-keys t)
 (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
-
-;; Auto Complete
-
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete/dict")
- 
-(set-default 'ac-sources
-             '(ac-source-abbrev
-               ac-source-dictionary
-               ac-source-yasnippet
-               ac-source-words-in-buffer
-               ac-source-words-in-same-mode-buffers
-               ac-source-semantic))
- 
-(ac-config-default)
- 
-(dolist (m '(c-mode c++-mode java-mode ruby-mode python-mode clojure-mode scheme-mode coffee-mode javascript-mode))
-  (add-to-list 'ac-modes m))
- 
-(global-auto-complete-mode t)
 
 ;; Personal keybindings
 
@@ -255,28 +212,8 @@
                                         (interactive)
                                         (kill-line 0)))
 
-(define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
-
-;; RSense
-(require 'rsense)
-
-;; Complete by C-c .
-(add-hook 'ruby-mode-hook
-          (lambda ()
-            (local-set-key (kbd "C-c .") 'ac-complete-rsense)))
-
-(add-hook 'ruby-mode-hook
-          (lambda ()
-            (add-to-list 'ac-sources 'ac-source-rsense-method)
-            (add-to-list 'ac-sources 'ac-source-rsense-constant)))
-
-;; twittering mode
-(require 'twittering-mode)
-(setq twittering-use-master-password t)
-
 ;; multi-term
 
-(require 'multi-term)
 (setq multi-term-program "/bin/zsh -l")
 
 (when (require 'multi-term nil t)
@@ -303,43 +240,6 @@
               (cons "M-p" 'term-send-raw-meta)
               (cons "M-y" 'term-send-raw-meta)
               (cons "C-y" 'term-send-raw))))
-
-(when (require 'term nil t)
-  (defun term-handle-ansi-terminal-messages (message)
-    (while (string-match "\eAnSiT.+\n" message)
-      ;; Extract the command code and the argument.
-      (let* ((start (match-beginning 0))
-             (command-code (aref message (+ start 6)))
-             (argument
-              (save-match-data
-                (substring message
-                           (+ start 8)
-                           (string-match "\r?\n" message
-                                         (+ start 8))))))
-        ;; Delete this command from MESSAGE.
-        (setq message (replace-match "" t t message))
- 
-        (cond ((= command-code ?c)
-               (setq term-ansi-at-dir argument))
-              ((= command-code ?h)
-               (setq term-ansi-at-host argument))
-              ((= command-code ?u)
-               (setq term-ansi-at-user argument))
-              ((= command-code ?e)
-               (save-excursion
-                 (find-file-other-window argument)))
-              ((= command-code ?x)
-               (save-excursion
-                 (find-file argument))))))
- 
-    (when (and term-ansi-at-host term-ansi-at-dir term-ansi-at-user)
-      (setq buffer-file-name
-            (format "%s@%s:%s" term-ansi-at-user term-ansi-at-host term-ansi-at-dir))
-      (set-buffer-modified-p nil)
-        (setq default-directory (if (string= term-ansi-at-host (system-name))
-                                    (concatenate 'string term-ansi-at-dir "/")
-                                  (format "/%s@%s:%s/" term-ansi-at-user term-ansi-at-host term-ansi-at-dir))))
-    message)
 
 (if (locate-library "edit-server")
     (progn
