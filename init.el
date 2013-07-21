@@ -147,10 +147,6 @@
 
 (display-time-mode t)
 
-;; Load whiteboard theme
-
-(load-theme 'whiteboard t)
-
 ;; Using org-mode-crate by Vedang
 
 (add-to-list 'load-path "/home/cha1tanya/Projects/sources/org-mode-crate/")
@@ -241,4 +237,3 @@
     (progn
       (require 'edit-server)
       (edit-server-start)))
-
