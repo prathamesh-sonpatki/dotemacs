@@ -62,6 +62,8 @@
 
   "A list of packages to ensure are installed at launch.")
 
+(auto-package-install my-packages)
+
 ;; Custom Font - Monaco
 
 (custom-set-faces
