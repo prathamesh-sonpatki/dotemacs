@@ -45,7 +45,6 @@
 
                       ;; editing
                       auto-complete
-                      auto-complete-config
                       smooth-scrolling
                       browse-kill-ring
                       undo-tree
@@ -58,6 +57,7 @@
                       multiple-cursors
                       paredit
                       multi-term
+                      rings
                       )
 
   "A list of packages to ensure are installed at launch.")
@@ -237,3 +237,13 @@
     (progn
       (require 'edit-server)
       (edit-server-start)))
+
+;; rings https://github.com/konr/rings
+
+(require 'rings)
+(global-set-key (kbd "<f2>")   (rings-generate-cycler 2))
+(global-set-key (kbd "C-<f2>") (rings-generate-setter 2))
+(global-set-key (kbd "<f3>")   (rings-generate-cycler 3))
+(global-set-key (kbd "C-<f3>") (rings-generate-setter 3))
+(global-set-key (kbd "<f4>")   (rings-generate-cycler 4))
+(global-set-key (kbd "C-<f4>") (rings-generate-setter 4))
