@@ -281,3 +281,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks"))
+
+;; whitespace mode
+(require 'whitespace)
+(global-whitespace-mode t)
+;; make whitespace-mode use just basic coloring
+(setq whitespace-style (quote
+                        (spaces tabs newline space-mark tab-mark newline-mark)))
