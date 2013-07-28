@@ -68,8 +68,8 @@
 ;; Custom Font - Monaco
 
 (custom-set-faces
- '(default ((t (:height 130 :family "Monaco"))))
- '(magit-item-highlight ((t nil)) t))
+ '(default ((t (:height 150 :family "Monaco"))))
+ '(magit-item-highlight ((t nil))))
 
 ;; My Own Key Bindings
 
@@ -209,7 +209,7 @@
 
 ;; multi-term
 
-(setq multi-term-program "/bin/zsh -l")
+(setq multi-term-program "/bin/zsh")
 
 (when (require 'multi-term nil t)
   (global-set-key (kbd "<f5>") 'multi-term)
@@ -253,6 +253,7 @@
 
 ;; autocomplete
 
+(require 'auto-complete)
 (global-auto-complete-mode t)
 
 ;; nrepl autocomplete
@@ -273,3 +274,10 @@
 
 ;; ac-nrepl popup doc
 (define-key nrepl-interaction-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)
+(put 'upcase-region 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks"))
