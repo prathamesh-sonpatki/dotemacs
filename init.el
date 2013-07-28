@@ -68,6 +68,10 @@
 ;; Custom Font - Monaco
 
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(default ((t (:height 150 :family "Monaco"))))
  '(magit-item-highlight ((t nil))))
 
@@ -129,7 +133,8 @@
   (add-to-list 'auto-mode-alist '("\\.erb\\'" . rhtml-mode))
   (add-to-list 'auto-mode-alist '("\\.rjs\\'" . rhtml-mode))
   (add-hook 'rhtml-mode '(lambda ()
-                           (define-key rhtml-mode-map (kbd "M-s") 'save-buffer))))
+                           (define-key rhtml-mode-map
+                             (kbd "M-s") 'save-buffer))))
 
 ;; Yaml mode hook
 
@@ -267,10 +272,13 @@
 ;; autocomplete using TAB
 (defun set-auto-complete-as-completion-at-point-function ()
   (setq completion-at-point-functions '(auto-complete)))
-(add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
+(add-hook
+ 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
 
 (add-hook 'nrepl-mode-hook 'set-auto-complete-as-completion-at-point-function)
-(add-hook 'nrepl-interaction-mode-hook 'set-auto-complete-as-completion-at-point-function)
+(add-hook
+ 'nrepl-interaction-mode-hook
+ 'set-auto-complete-as-completion-at-point-function)
 
 ;; ac-nrepl popup doc
 (define-key nrepl-interaction-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)
