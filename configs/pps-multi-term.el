@@ -26,3 +26,5 @@
               (cons "M-p" 'term-send-raw-meta)
               (cons "M-y" 'term-send-raw-meta)
               (cons "C-y" 'term-send-raw))))
+
+(provide 'pps-multi-term)

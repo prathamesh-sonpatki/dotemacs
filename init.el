@@ -2,9 +2,17 @@
 
 ;; configure load path
 (setq load-path (cons "~/.emacs.d" load-path))
-(add-to-list 'load-path "~/.emacs.d/configs")
-(add-to-list 'load-path "~/.emacs.d/hooks")
 
+(setq root-dir "~/.emacs.d")
+
+(setq configs-dir (concat root-dir "/configs"))
+(add-to-list 'load-path configs-dir)
+
+(setq hooks-dir (concat root-dir "/hooks"))
+(add-to-list 'load-path hooks-dir)
+
+(require 'pps-rcirc)
+(require 'pps-multi-term)
 (require 'auto-package)
 
 (defvar my-packages '(melpa

@@ -17,3 +17,8 @@
                                (setq c-tab-always-indent nil)
                                (require 'inf-ruby)
                                (require 'ruby-compilation))))
+
+;; Activate rvm
+
+(add-hook 'ruby-mode-hook
+          (lambda () (rvm-activate-corresponding-ruby)))

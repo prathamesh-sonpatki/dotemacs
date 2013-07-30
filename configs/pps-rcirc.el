@@ -79,5 +79,4 @@
 ;;; track activity when I'm in another buffer
 (eval-after-load 'rcirc '(rcirc-track-minor-mode))
 
-
-(provide 'rcirc-config)
+(provide 'pps-rcirc)
