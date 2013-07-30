@@ -1,5 +1,9 @@
+;; init.el
 
+;; configure load path
 (setq load-path (cons "~/.emacs.d" load-path))
+(add-to-list 'load-path "~/.emacs.d/configs")
+
 (require 'auto-package)
 
 (defvar my-packages '(melpa
