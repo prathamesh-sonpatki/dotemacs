@@ -66,7 +66,6 @@
                       rings
                       rcirc
                       )
-
   "A list of packages to ensure are installed at launch.")
 
 (auto-package-install my-packages)
@@ -302,3 +301,7 @@
 ;; make whitespace-mode use just basic coloring
 (setq whitespace-style (quote
                         (spaces tabs newline space-mark tab-mark newline-mark)))
+
+;;; No GUI
+(dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
+  (when (fboundp mode) (funcall mode -1)))
