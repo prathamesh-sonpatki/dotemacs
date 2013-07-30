@@ -1,3 +1,4 @@
+
 (setq load-path (cons "~/.emacs.d" load-path))
 (require 'auto-package)
 
@@ -59,6 +60,7 @@
                       paredit
                       multi-term
                       rings
+                      rcirc
                       )
 
   "A list of packages to ensure are installed at launch.")
