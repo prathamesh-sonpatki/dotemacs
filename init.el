@@ -11,8 +11,6 @@
 (setq hooks-dir (concat root-dir "/hooks"))
 (add-to-list 'load-path hooks-dir)
 
-(require 'pps-rcirc)
-(require 'pps-multi-term)
 (require 'auto-package)
 
 (defvar my-packages '(melpa
@@ -78,6 +76,9 @@
   "A list of packages to ensure are installed at launch.")
 
 (auto-package-install my-packages)
+
+(require 'pps-rcirc)
+(require 'pps-multi-term)
 
 ;; Custom Font - Monaco
 
