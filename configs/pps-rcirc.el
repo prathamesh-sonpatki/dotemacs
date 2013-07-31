@@ -4,7 +4,7 @@
       rcirc-default-user-name "Prathamesh"
       rcirc-default-full-name "Prathamesh Sonpatki"
       rcirc-debug-flag t
-      rcirc-log-directory "rcirc-logs/"
+      rcirc-log-directory (concat logs-dir "/rcirc-logs")
       rcirc-log-flag t
       rcirc-time-format "%Y-%m-%d %H:%M "
       rcirc-server-alist '(("irc.freenode.net"

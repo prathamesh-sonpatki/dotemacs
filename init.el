@@ -11,6 +11,8 @@
 (setq hooks-dir (concat root-dir "/hooks"))
 (add-to-list 'load-path hooks-dir)
 
+(setq logs-dir (concat root-dir "/logs"))
+
 (require 'auto-package)
 
 (defvar my-packages '(melpa
