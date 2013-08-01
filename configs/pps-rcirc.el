@@ -16,7 +16,7 @@
                                        "#betterlabs"
                                        "#jruby"
                                        "#rubyonrails"
-                                       "#bangloreruby"
+                                       "#bangaloreruby"
                                        "#rails-contrib"
                                        "#c42"
                                        "#nilenso"
