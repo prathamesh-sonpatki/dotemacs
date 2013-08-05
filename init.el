@@ -124,7 +124,7 @@
 
 ;; Adding leim to load path
 
-(add-to-list 'load-path "/usr/share/emacs/24.2/leim")
+(add-to-list 'load-path "/usr/share/emacs/24.3/leim")
 
 (add-hook 'scheme-mode-hook
           (lambda () (paredit-mode +1)))
