@@ -74,6 +74,7 @@
                       multi-term
                       rings
                       rcirc
+                      smartparens
                       )
   "A list of packages to ensure are installed at launch.")
 
@@ -89,7 +90,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 130 :family "Monaco"))))
+ '(default ((t (:height 150 :family "Monaco"))))
  '(magit-item-highlight ((t nil))))
 
 ;; My Own Key Bindings
@@ -187,11 +188,16 @@
 (global-linum-mode t)
 
 ;; whitespace mode
-(global-whitespace-mode t)
+;;(global-whitespace-mode f)
 ;; make whitespace-mode use just basic coloring
+;;
 (setq whitespace-style (quote
-                        (spaces tabs newline space-mark tab-mark newline-mark)))
+                        (space-mark tab-mark newline-mark)))
 
 ;;; No GUI
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
+
+;; smartparens
+
+(require 'smartparens)
