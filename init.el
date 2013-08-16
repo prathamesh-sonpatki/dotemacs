@@ -1,6 +1,7 @@
 ;; init.el
 
 ;; configure load path
+;; FIXME no need of putting entire .emacs.d/* on load path
 (setq load-path (cons "~/.emacs.d" load-path))
 
 (setq root-dir "~/.emacs.d")
@@ -91,9 +92,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 110 :family "Monaco"))))
+ '(default ((t (:height 140 :family "Monaco"))))
  '(magit-item-highlight ((t nil))))
 
+(load-theme 'molokai t)
 ;; My Own Key Bindings
 
 (global-set-key "\C-w" 'backward-kill-word)
@@ -183,7 +185,12 @@
 (define-key nrepl-interaction-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)
 (put 'upcase-region 'disabled nil)
 (custom-set-variables
- '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks"))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
+ '(custom-safe-themes (quote ("6615e5aefae7d222a0c252c81aac52c4efb2218d35dfbb93c023c4b94d3fa0db" default))))
 
 ;; linum mode
 (global-linum-mode t)
