@@ -22,3 +22,14 @@
 
 (add-hook 'ruby-mode-hook
           (lambda () (rvm-activate-corresponding-ruby)))
+
+
+;; Add HashRocket
+
+(defun insert-arrow ()
+  (interactive)
+  (delete-horizontal-space t)
+  (insert " => "))
+
+(define-key ruby-mode-map (kbd "C-.") 'insert-arrow)
+;;(define-key rinari-minor-mode-map (kbd "C-.") 'insert-arrow)
