@@ -9,9 +9,10 @@
 (add-to-list 'load-path configs-dir)
 
 (setq hooks-dir (concat root-dir "/hooks"))
-(add-to-list 'load-path hooks-dir)
-
 (setq logs-dir (concat root-dir "/logs"))
+
+;; load the hooks
+(mapcar 'load (directory-files hooks-dir t "\\.el\\'"))
 
 (require 'auto-package)
 
@@ -90,7 +91,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 150 :family "Monaco"))))
+ '(default ((t (:height 110 :family "Monaco"))))
  '(magit-item-highlight ((t nil))))
 
 ;; My Own Key Bindings
