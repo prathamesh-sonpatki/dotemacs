@@ -118,10 +118,6 @@
 
 (global-font-lock-mode 1)
 
-;; Adding leim to load path
-
-(add-to-list 'load-path "/usr/share/emacs/24.1/leim")
-
 ;; Display time
 
 (display-time-mode t)
