@@ -1,19 +1,10 @@
 ;; init.el
 
-;; configure load path
-;; FIXME no need of putting entire .emacs.d/* on load path
 (setq load-path (cons "~/.emacs.d" load-path))
-
 (setq root-dir "~/.emacs.d")
-
 (setq configs-dir (concat root-dir "/configs"))
-(add-to-list 'load-path configs-dir)
-
 (setq hooks-dir (concat root-dir "/hooks"))
 (setq logs-dir (concat root-dir "/logs"))
-
-;; load the hooks
-(mapcar 'load (directory-files hooks-dir t "\\.el\\'"))
 
 (require 'auto-package)
 
@@ -77,13 +68,19 @@
                       rings
                       rcirc
                       smartparens
+                      shell
                       )
   "A list of packages to ensure are installed at launch.")
 
 (auto-package-install my-packages)
 
+;; load configs
+(add-to-list 'load-path configs-dir)
 (require 'pps-rcirc)
 (require 'pps-multi-term)
+
+;; load the hooks
+(mapcar 'load (directory-files hooks-dir t "\\.el\\'"))
 
 ;; Custom Font - Monaco
 
