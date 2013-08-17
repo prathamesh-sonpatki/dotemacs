@@ -95,7 +95,12 @@
  '(default ((t (:height 140 :family "Monaco"))))
  '(magit-item-highlight ((t nil))))
 
+;; Load molokai theme
 (load-theme 'molokai t)
+
+;; Start in full screen mode
+(toggle-frame-fullscreen)
+
 ;; My Own Key Bindings
 
 (global-set-key "\C-w" 'backward-kill-word)
@@ -107,6 +112,7 @@
 (global-set-key (kbd "C-<backspace>") (lambda ()
                                         (interactive)
                                         (kill-line 0)))
+(global-set-key (kbd "<f1>") 'toggle-frame-fullscreen)
 
 ; Allows syntax highlighting to work
 
