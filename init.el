@@ -24,8 +24,8 @@
                       starter-kit-bindings
                       starter-kit-eshell
                       textmate
-                      ;; themes
-                      color-theme-sanityinc-solarized
+
+                      ;; theme
                       molokai-theme
 
                       ;; clojure
@@ -135,18 +135,6 @@
 ;; Adding leim to load path
 
 (add-to-list 'load-path "/usr/share/emacs/24.3/leim")
-
-(add-hook 'scheme-mode-hook
-          (lambda () (paredit-mode +1)))
-
-(add-hook 'inferior-scheme-mode-hook
-          (lambda () (paredit-mode +1)))
-
-(add-hook 'clojure-mode-hook
-          (lambda () (paredit-mode +1)))
-
-(add-hook 'emacs-lisp-mode-hool
-          (lambda () (paredit-mode +1)))
 
 (defun jw-indent-block (n)
   (interactive "p")
