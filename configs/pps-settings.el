@@ -36,4 +36,9 @@
 (setq org-directory "/home/cha1tanya/Notes")
 (require 'org-mode-crate-init)
 
+;; powerline
+(require 'powerline)
+(powerline-default-theme)
+
 (provide 'pps-settings)
+

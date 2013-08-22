@@ -61,6 +61,7 @@
                       rcirc
                       smartparens
                       shell
+                      powerline
                       )
   "A list of packages to ensure are installed at launch.")
 
