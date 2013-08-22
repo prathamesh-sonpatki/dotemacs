@@ -1,6 +1,6 @@
 ;; multi-term
 
-(setq multi-term-program "/bin/zsh")
+(setq multi-term-program "/bin/zsh -l")
 
 (when (require 'multi-term nil t)
   (global-set-key (kbd "<f5>") 'multi-term)
