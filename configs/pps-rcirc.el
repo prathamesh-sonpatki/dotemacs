@@ -22,6 +22,7 @@
                                        "#nilenso"
                                        "#valu"
                                        "#coffeescript"
+                                       "#rubinius"
                                        ))
                            )
       rcirc-authinfo '(("freenode" nickserv "cha1tanya" "prathamesh"))
