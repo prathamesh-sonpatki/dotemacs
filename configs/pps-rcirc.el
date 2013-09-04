@@ -10,19 +10,14 @@
       rcirc-server-alist '(("irc.freenode.net"
                             :channels (
                                        "#emacs"
-                                       "#git"
-                                       "#github"
                                        "#punerb"
                                        "#betterlabs"
                                        "#jruby"
                                        "#rubyonrails"
                                        "#bangaloreruby"
                                        "#rails-contrib"
-                                       "#c42"
-                                       "#nilenso"
                                        "#valu"
-                                       "#coffeescript"
-                                       "#rubinius"
+                                       "#fedora-ruby"
                                        ))
                            )
       rcirc-authinfo '(("freenode" nickserv "cha1tanya" "prathamesh"))
