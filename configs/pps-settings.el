@@ -1,5 +1,5 @@
 ;; Custom Font - Monaco
-(set-face-attribute 'default nil :height 140 :family "monaco")
+(set-face-attribute 'default nil :height 125 :family "monaco")
 
 ;; Load molokai theme
 (load-theme 'molokai t)
@@ -41,4 +41,3 @@
 (powerline-default-theme)
 
 (provide 'pps-settings)
-
