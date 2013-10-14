@@ -18,6 +18,8 @@
                                        "#rails-contrib"
                                        "#valu"
                                        "#fedora-ruby"
+                                       "#rubinius"
+                                       "#doothings"
                                        ))
                            )
       rcirc-authinfo '(("freenode" nickserv "cha1tanya" "prathamesh"))
