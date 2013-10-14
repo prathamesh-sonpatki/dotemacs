@@ -17,3 +17,6 @@ emms/
 eshell/
 bookmarks
 logs/
+tramp
+.org-id-locations
+elpa_backup/
