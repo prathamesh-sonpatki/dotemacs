@@ -21,6 +21,8 @@
                       ;; ruby
                       rinari
                       rspec-mode
+                      rhtml-mode
+                      ruby-electric
 
                       ;; js
                       js2-mode
@@ -62,6 +64,8 @@
                       smartparens
                       shell
                       powerline
+                      anything
+                      csv-mode
                       )
   "A list of packages to ensure are installed at launch.")
 
