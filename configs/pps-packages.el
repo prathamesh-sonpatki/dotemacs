@@ -66,6 +66,9 @@
                       powerline
                       anything
                       csv-mode
+                      ag
+                      grizzl
+                      projectile
                       )
   "A list of packages to ensure are installed at launch.")
 

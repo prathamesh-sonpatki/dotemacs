@@ -41,3 +41,8 @@
 (powerline-default-theme)
 
 (provide 'pps-settings)
+
+;; projectile
+(require 'projectile)
+(projectile-global-mode)
+(setq projectile-completion-system 'grizzl)
