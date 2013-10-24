@@ -1,8 +1,8 @@
 ;; Custom Font - Monaco
-(set-face-attribute 'default nil :height 125 :family "monaco")
+(set-face-attribute 'default nil :height 180 :family "monaco")
 
 ;; Load molokai theme
-(load-theme 'molokai t)
+(load-theme 'tangotango t)
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
