@@ -46,3 +46,6 @@
 (require 'projectile)
 (projectile-global-mode)
 (setq projectile-completion-system 'grizzl)
+
+(require 'ace-jump-mode)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
