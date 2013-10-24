@@ -69,6 +69,10 @@
                       ag
                       grizzl
                       projectile
+                      ace-jump-mode
+
+                      ;; org
+                      org-pomodoro
                       )
   "A list of packages to ensure are installed at launch.")
 
