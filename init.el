@@ -1,3 +1,14 @@
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+
+;; initialize cask
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+
 ;; set paths
 (setq load-path (cons "~/.emacs.d" load-path))
 (setq root-dir "~/.emacs.d")
@@ -7,7 +18,7 @@
 
 ;; load configs
 (add-to-list 'load-path configs-dir)
-(require 'pps-packages)
+
 (require 'pps-rcirc)
 (require 'pps-multi-term)
 (require 'pps-settings)
