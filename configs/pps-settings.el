@@ -1,5 +1,5 @@
 ;; Load molokai theme
-(load-theme 'tangotango t)
+(load-theme 'molokai t)
 
 ;; Custom Font - Monaco
 (set-face-attribute 'default nil :height 130 :family "monaco")
