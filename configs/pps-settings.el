@@ -53,3 +53,6 @@
 
 ;; pallet
 (require 'pallet)
+
+;; web-mode
+(require 'web-mode)
