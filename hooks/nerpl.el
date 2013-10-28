@@ -14,6 +14,3 @@
 (add-hook
  'nrepl-interaction-mode-hook
  'set-auto-complete-as-completion-at-point-function)
-
-;; ac-nrepl popup doc
-(define-key nrepl-interaction-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)

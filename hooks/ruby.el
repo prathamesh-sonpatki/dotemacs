@@ -1,3 +1,4 @@
+
 (autoload 'ruby-mode "ruby-mode" nil t)
 
 ;; Custom file types to which Ruby mode is applied
