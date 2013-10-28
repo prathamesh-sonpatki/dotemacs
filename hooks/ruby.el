@@ -25,6 +25,9 @@
 (add-hook 'ruby-mode-hook
           (lambda () (rvm-activate-corresponding-ruby)))
 
+(add-hook 'enh-ruby-mode-hook
+          (lambda () (rvm-activate-corresponding-ruby)))
+
 
 ;; Add HashRocket
 
@@ -41,3 +44,8 @@
 (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
 (add-hook 'enh-ruby-mode-hook 'inf-ruby-minor-mode)
 (add-hook 'after-init-hook 'inf-ruby-switch-setup)
+
+;; robe
+(add-hook 'ruby-mode-hook 'robe-mode)
+(add-hook 'enh-ruby-mode-hook 'robe-mode)
+(push 'ac-source-robe ac-sources)
