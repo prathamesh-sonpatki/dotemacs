@@ -50,6 +50,7 @@
 (depends-on "highlight-indentation")
 (depends-on "idle-highlight-mode")
 (depends-on "ido-ubiquitous")
+(depends-on "ido-vertical-mode")
 (depends-on "inf-ruby")
 (depends-on "inflections")
 (depends-on "js2-mode")
