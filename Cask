@@ -59,6 +59,7 @@
 (depends-on "less-css-mode")
 (depends-on "logito")
 (depends-on "magit")
+(depends-on "magit-commit-training-wheels")
 (depends-on "magit-filenotify")
 (depends-on "magit-find-file")
 (depends-on "magit-gh-pulls")

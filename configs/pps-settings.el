@@ -62,3 +62,7 @@
 (setq ido-everywhere t)
 (ido-mode 1) 
 (ido-vertical-mode 1)
+
+;; magit
+(require 'magit-commit-training-wheels)
+(ad-activate 'magit-log-edit-commit)
