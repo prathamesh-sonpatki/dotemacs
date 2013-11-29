@@ -46,6 +46,7 @@
 (require 'projectile)
 (projectile-global-mode)
 (setq projectile-completion-system 'grizzl)
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 ;; ace jump mode
 (require 'ace-jump-mode)
