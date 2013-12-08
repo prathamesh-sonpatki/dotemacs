@@ -49,3 +49,7 @@
 (add-hook 'ruby-mode-hook 'robe-mode)
 (add-hook 'enh-ruby-mode-hook 'robe-mode)
 (push 'ac-source-robe ac-sources)
+
+
+;; Bundler
+(require 'bundler)

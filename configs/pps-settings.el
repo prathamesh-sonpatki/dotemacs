@@ -1,5 +1,5 @@
 ;; Load molokai theme
-(load-theme 'molokai t)
+(load-theme 'monokai t)
 
 ;; Custom Font - Monaco
 (set-face-attribute 'default nil :height 140 :family "Fira Mono OT")
@@ -47,6 +47,7 @@
 (projectile-global-mode)
 (setq projectile-completion-system 'grizzl)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
+(setq projectile-switch-project-action 'projectile-dired)
 
 ;; ace jump mode
 (require 'ace-jump-mode)
