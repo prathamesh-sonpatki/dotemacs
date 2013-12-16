@@ -22,3 +22,4 @@ tramp
 elpa_backup/
 projectile-bookmarks.eld
 .cask
+projectile.cache
