@@ -61,3 +61,6 @@
 
 (add-hook 'coffee-mode-hook
           (lambda () (highlight-indentation-current-column-mode)))
+
+;; add rubocop - Ruby static code analyzer
+(add-hook 'ruby-mode-hook 'rubocop-mode)

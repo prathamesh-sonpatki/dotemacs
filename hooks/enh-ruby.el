@@ -10,8 +10,17 @@
 (add-to-list 'auto-mode-alist '(".railsrc" . enh-ruby-mode))
 
 (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
- 
+
 (setq enh-ruby-bounce-deep-indent t)
 (setq enh-ruby-hanging-brace-indent-level 2)
 
 (require 'cl) ; If you don't have it already
+
+;; add rubocop - Ruby static code analyzer
+(add-hook 'enh-ruby-mode-hook 'rubocop-mode)
+
+(custom-set-variables
+ '(rspec-use-bundler-when-possible t)
+ '(rspec-use-rvm t)
+ '(rspec-use-zeus-when-possible t)
+)
