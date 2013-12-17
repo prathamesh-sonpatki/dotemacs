@@ -76,7 +76,6 @@
 (depends-on "magit-gh-pulls")
 (depends-on "magit-log-edit")
 (depends-on "magit-push-remote")
-(depends-on "magit-stgit")
 (depends-on "magit-tramp")
 (depends-on "man-commands")
 (depends-on "markdown-mode")
