@@ -74,7 +74,6 @@
 (depends-on "magit-filenotify")
 (depends-on "magit-find-file")
 (depends-on "magit-gh-pulls")
-(depends-on "magit-log-edit")
 (depends-on "magit-push-remote")
 (depends-on "magit-tramp")
 (depends-on "man-commands")
