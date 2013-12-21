@@ -2,7 +2,7 @@
 (load-theme 'monokai t)
 
 ;; Custom Font - Monaco
-(set-face-attribute 'default nil :height 140 :family "Fira Mono OT")
+(set-face-attribute 'default nil :height 120 :family "Fira Mono OT")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
@@ -67,4 +67,3 @@
 
 ;; magit
 (require 'magit-commit-training-wheels)
-(ad-activate 'magit-log-edit-commit)
