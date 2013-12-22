@@ -1,5 +1,6 @@
-;; Load molokai theme
-(load-theme 'monokai t)
+;; Theme
+(require 'color-theme-sanityinc-tomorrow)
+(load-theme 'sanityinc-tomorrow-day t)
 
 ;; Custom Font - Monaco
 (set-face-attribute 'default nil :height 120 :family "Fira Mono OT")

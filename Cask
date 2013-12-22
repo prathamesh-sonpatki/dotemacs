@@ -23,6 +23,7 @@
 (depends-on "coffee-mode")
 (depends-on "color-theme")
 (depends-on "color-theme-railscasts")
+(depends-on "color-theme-sanityinc-tomorrow")
 (depends-on "company")
 (depends-on "dash")
 (depends-on "elixir-mode")
