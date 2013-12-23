@@ -48,6 +48,7 @@
 (projectile-global-mode)
 (setq projectile-completion-system 'grizzl)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
+(setq projectile-rails-expand-snippet nil)
 (setq projectile-switch-project-action 'projectile-dired)
 
 ;; ace jump mode
