@@ -69,3 +69,7 @@
 
 ;; magit
 (require 'magit-commit-training-wheels)
+
+;; ag aka silver search
+(require 'ag)
+(setq ag-highlight-search t)
