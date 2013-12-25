@@ -11,15 +11,12 @@
                             :channels (
                                        "#emacs"
                                        "#punerb"
-                                       "#betterlabs"
-                                       "#jruby"
                                        "#rubyonrails"
                                        "#bangaloreruby"
                                        "#rails-contrib"
                                        "#valu"
-                                       "#fedora-ruby"
-                                       "#rubinius"
                                        "#doothings"
+                                       "#bundler"
                                        ))
                            )
       rcirc-authinfo '(("freenode" nickserv "cha1tanya" "prathamesh"))
