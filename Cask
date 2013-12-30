@@ -46,6 +46,8 @@
 (depends-on "gist")
 (depends-on "git-commit-mode")
 (depends-on "git-rebase-mode")
+(depends-on "gitconfig-mode")
+(depends-on "gitignore-mode")
 (depends-on "go-autocomplete")
 (depends-on "go-mode")
 (depends-on "golden-ratio")
