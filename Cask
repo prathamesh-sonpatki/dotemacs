@@ -33,6 +33,7 @@
 (depends-on "f")
 (depends-on "find-file-in-project")
 (depends-on "findr")
+(depends-on "flycheck")
 (depends-on "flymake-css")
 (depends-on "flymake-easy")
 (depends-on "flymake-haml")

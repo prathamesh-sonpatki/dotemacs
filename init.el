@@ -30,3 +30,6 @@
 
 ;; load the hooks
 (mapcar 'load (directory-files hooks-dir t "\\.el\\'"))
+
+;; Enable Flycheck mode
+(add-hook 'after-init-hook #'global-flycheck-mode)
