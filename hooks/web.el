@@ -8,6 +8,6 @@
 
 (setq web-mode-engines-alist '(("ruby"    . "\\.erb\\'")))
 
-(remove-hook 'prog-mode-hook 'esk-pretty-lambdas)
-(remove-hook 'prog-mode-hook 'esk-add-watchwords)
-(remove-hook 'prog-mode-hook 'idle-highlight-mode)
+;;(remove-hook 'prog-mode-hook 'esk-pretty-lambdas)
+;;(remove-hook 'prog-mode-hook 'esk-add-watchwords)
+;;(remove-hook 'prog-mode-hook 'idle-highlight-mode)
