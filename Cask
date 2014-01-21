@@ -71,7 +71,6 @@
 (depends-on "inflections")
 (depends-on "io-mode")
 (depends-on "jquery-doc")
-(depends-on "js2-mode")
 (depends-on "jump")
 (depends-on "key-chord")
 (depends-on "less-css-mode")
