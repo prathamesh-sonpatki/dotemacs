@@ -1,3 +1,10 @@
+;;; package --- summary
+
+;;; Commentary:
+;; General Settings
+
+;;; Code:
+
 ;; Theme
 ;;(require 'color-theme-sanityinc-tomorrow)
 (load-theme 'monokai t)
@@ -27,15 +34,6 @@
 ;;; No GUI
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
-
-;; Adding leim to load path
-(add-to-list 'load-path "/usr/share/emacs/24.3/leim")
-
-;; Using org-mode-crate by Vedang
-
-(add-to-list 'load-path "/home/cha1tanya/Projects/sources/org-mode-crate/")
-(setq org-directory "/home/cha1tanya/Notes")
-(require 'org-mode-crate-init)
 
 ;; powerline
 (require 'powerline)
@@ -73,3 +71,8 @@
 ;; ag aka silver search
 (require 'ag)
 (setq ag-highlight-search t)
+
+;; Trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;;; pps-settings ends here
