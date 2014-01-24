@@ -6,11 +6,12 @@
 ;;; Code:
 
 ;; Theme
-;;(require 'color-theme-sanityinc-tomorrow)
-(load-theme 'monokai t)
+(require 'color-theme-sanityinc-tomorrow)
+(load-theme 'sanityinc-tomorrow-day t)
+;;(load-theme 'monokai t)
 
 ;; Custom Font - Monaco
-(set-face-attribute 'default nil :height 120 :family "Fira Mono OT")
+(set-face-attribute 'default nil :height 130 :weight 'normal :family "Fira Mono OT")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
