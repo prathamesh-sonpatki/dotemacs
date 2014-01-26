@@ -1,11 +1,10 @@
-;; Custom file types to which Coffee mode is applied
+;; Hooks for coffee mode
 
+;;; Code:
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 
-(defun coffee-custom ()
-  "coffee-mode-hook"
-  (set (make-local-variable 'tab-width) 2))
+;; Set tab width for coffee mode
+(setq coffee-tab-width 2)
 
-(add-hook 'coffee-mode-hook
-          '(lambda () (coffee-custom)))
+;;; coffee.el ends here
