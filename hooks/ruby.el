@@ -19,19 +19,6 @@
                              (setq c-tab-always-indent nil)
                              (require 'inf-ruby)
                              (require 'ruby-compilation)))
-
-;; Activate rvm
-
-(require 'rvm)
-(rvm-use-default) ;; use rvm's default ruby for the current Emacs session
-
-(add-hook 'ruby-mode-hook
-          (lambda () (rvm-activate-corresponding-ruby)))
-
-(add-hook 'enh-ruby-mode-hook
-          (lambda () (rvm-activate-corresponding-ruby)))
-
-
 ;; Add HashRocket
 
 (defun insert-arrow ()
@@ -67,3 +54,7 @@
 
 ;; add rubocop - Ruby static code analyzer
 (add-hook 'ruby-mode-hook 'rubocop-mode)
+
+;;rbnenv
+(require 'rbenv)
+(global-rbenv-mode)
