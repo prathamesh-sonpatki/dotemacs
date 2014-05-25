@@ -11,7 +11,7 @@
 ;;(load-theme 'monokai t)
 
 ;; Custom Font - Monaco
-(set-face-attribute 'default nil :height 130 :weight 'normal :family "Fira Mono OT")
+(set-face-attribute 'default nil :height 180 :weight 'normal :family "Menlo")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
