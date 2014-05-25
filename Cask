@@ -1,6 +1,6 @@
+(source gnu)
 (source marmalade)
 (source melpa)
-(source gnu)
 
 (depends-on "4clojure")
 (depends-on "ac-nrepl")
@@ -116,6 +116,7 @@
 (depends-on "quack")
 (depends-on "racket-mode")
 (depends-on "rainbow-delimiters")
+(depends-on "rbenv")
 (depends-on "request")
 (depends-on "rhtml-mode")
 (depends-on "rinari")
@@ -126,7 +127,6 @@
 (depends-on "ruby-compilation")
 (depends-on "ruby-electric")
 (depends-on "ruby-refactor")
-(depends-on "rvm")
 (depends-on "s")
 (depends-on "sass-mode")
 (depends-on "scheme-complete")
