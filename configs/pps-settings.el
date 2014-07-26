@@ -72,5 +72,6 @@
 (guru-global-mode +1)
 
 ;; Enable company mode
-(add-hook 'after-init-hook 'global-company-mode)
+(global-company-mode t)
+(push 'company-robe company-backends)
 ;;; pps-settings ends here
