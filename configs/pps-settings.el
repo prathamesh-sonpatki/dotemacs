@@ -7,8 +7,8 @@
 
 ;; Theme
 (require 'color-theme-sanityinc-tomorrow)
-(load-theme 'sanityinc-tomorrow-day t)
-;;(load-theme 'monokai t)
+;;(load-theme 'sanityinc-tomorrow-day t)
+(load-theme 'monokai t)
 
 ;; Custom Font - Monaco
 (set-face-attribute 'default nil :height 180 :weight 'normal :family "Menlo")
@@ -25,20 +25,9 @@
 ;; linum mode
 (global-linum-mode t)
 
-;; autocomplete
-(require 'auto-complete)
-(global-auto-complete-mode t)
-
-;; nrepl autocomplete
-(require 'ac-nrepl)
-
 ;;; No GUI
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
-
-;; powerline
-(require 'powerline)
-(powerline-default-theme)
 
 (provide 'pps-settings)
 
@@ -76,4 +65,12 @@
 ;; Trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; Enable spell check
+(add-hook 'find-file-hooks 'turn-on-flyspell)
+
+;; Set guru mode
+(guru-global-mode +1)
+
+;; Enable company mode
+(add-hook 'after-init-hook 'global-company-mode)
 ;;; pps-settings ends here
