@@ -72,6 +72,6 @@
 (push 'company-robe company-backends)
 
 ;; Scratch buffer configuration
-(setq initial-major-mode 'ruby-mode)
+;;setq(setq initial-major-mode 'ruby-mode)
 (setq initial-scratch-message nil)
 ;;; pps-settings ends here
