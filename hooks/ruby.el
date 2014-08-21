@@ -57,3 +57,6 @@
 ;;rbnenv
 (require 'rbenv)
 (global-rbenv-mode)
+
+;;minitest
+(add-hook 'ruby-mode-hook 'minitest-mode)
