@@ -6,12 +6,10 @@
 ;;; Code:
 
 ;; Theme
-(require 'color-theme-sanityinc-tomorrow)
-;;(load-theme 'sanityinc-tomorrow-day t)
-(load-theme 'monokai t)
+(load-theme 'sanityinc-tomorrow-day t)
 
 ;; Custom Font - Monaco
-(set-face-attribute 'default nil :height 180 :weight 'normal :family "Menlo")
+(set-face-attribute 'default nil :height 140 :family "Droid Sans Mono")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
