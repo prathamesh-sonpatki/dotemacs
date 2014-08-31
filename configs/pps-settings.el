@@ -9,7 +9,7 @@
 (load-theme 'sanityinc-tomorrow-day t)
 
 ;; Custom Font - Monaco
-(set-face-attribute 'default nil :height 140 :family "Droid Sans Mono")
+(set-face-attribute 'default nil :height 150 :family "Droid Sans Mono")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
