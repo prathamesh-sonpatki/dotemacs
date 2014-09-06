@@ -6,10 +6,10 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'sanityinc-tomorrow-day t)
+(load-theme 'monokai t)
 
-;; Custom Font - Monaco
-(set-face-attribute 'default nil :height 150 :family "Droid Sans Mono")
+;; Custom Font
+(set-face-attribute 'default nil :height 160 :family "Droid Sans Mono")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
@@ -31,11 +31,16 @@
 
 ;; projectile
 (require 'projectile)
+(require 'grizzl)
 (projectile-global-mode)
 (setq projectile-completion-system 'grizzl)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
-(setq projectile-rails-expand-snippet nil)
 (setq projectile-switch-project-action 'projectile-dired)
+(setq projectile-enable-caching t)
+;; Press Command-p for fuzzy find in project
+(global-set-key (kbd "s-p") 'projectile-find-file)
+;; Press Command-b for fuzzy switch buffer
+(global-set-key (kbd "s-b") 'projectile-switch-to-buffer)
 
 ;; pallet
 (require 'pallet)
