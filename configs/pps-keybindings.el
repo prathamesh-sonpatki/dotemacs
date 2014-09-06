@@ -11,4 +11,15 @@
                                         (kill-line 0)))
 (global-set-key (kbd "<f1>") 'toggle-frame-fullscreen)
 
+;; Font size
+(define-key global-map (kbd "C-+") 'text-scale-increase)
+(define-key global-map (kbd "C--") 'text-scale-decrease)
+
+;; Multiple cursors
+
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
 (provide 'pps-keybindings)
