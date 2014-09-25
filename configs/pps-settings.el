@@ -9,7 +9,9 @@
 (load-theme 'monokai t)
 
 ;; Custom Font
-(set-face-attribute 'default nil :height 160 :family "Droid Sans Mono")
+(set-frame-font "Source Code Pro")
+(set-face-attribute 'default nil :font "Source Code Pro" :height 160)
+(set-face-font 'default "Source Code Pro")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)

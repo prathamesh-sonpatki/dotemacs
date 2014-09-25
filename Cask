@@ -6,6 +6,7 @@
 (depends-on "ag")
 (depends-on "alert")
 (depends-on "anything")
+(depends-on "async")
 (depends-on "browse-kill-ring")
 (depends-on "bundler")
 (depends-on "cask")
