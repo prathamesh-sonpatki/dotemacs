@@ -6,11 +6,11 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'monokai t)
+(load-theme 'sanityinc-tomorrow-day t)
 
 ;; Custom Font
 (set-frame-font "Source Code Pro")
-(set-face-attribute 'default nil :font "Source Code Pro" :height 160)
+(set-face-attribute 'default nil :font "Source Code Pro" :height 180)
 (set-face-font 'default "Source Code Pro")
 
 ;; Start in full screen mode
