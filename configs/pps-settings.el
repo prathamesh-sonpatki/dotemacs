@@ -6,7 +6,7 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'molokai t)
+(load-theme 'tango-dark t)
 
 ;; Custom Font
 (set-frame-font "Source Code Pro")
