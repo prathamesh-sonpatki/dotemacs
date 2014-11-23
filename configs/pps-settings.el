@@ -6,11 +6,11 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'tango-dark t)
+(load-theme 'mbo70s t)
 
 ;; Custom Font
 (set-frame-font "Source Code Pro")
-(set-face-attribute 'default nil :font "Source Code Pro" :height 160)
+(set-face-attribute 'default nil :font "Source Code Pro" :height 210)
 (set-face-font 'default "Source Code Pro")
 
 ;; Start in full screen mode
@@ -62,6 +62,7 @@
 ;; ag aka silver search
 (require 'ag)
 (setq ag-highlight-search t)
+(setq ag-reuse-buffers 't)
 
 ;; Trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
