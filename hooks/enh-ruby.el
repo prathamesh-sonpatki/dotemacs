@@ -9,6 +9,7 @@
 (add-to-list 'auto-mode-alist '(".irbrc" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '(".railsrc" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '(".god" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Appraisals" . ruby-mode))
 
 (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
 

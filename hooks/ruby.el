@@ -11,6 +11,7 @@
 (add-to-list 'auto-mode-alist '("\\.jbuilder\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '(".irbrc" . ruby-mode))
 (add-to-list 'auto-mode-alist '(".railsrc" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Appraisals" . ruby-mode))
 
 ;; Ruby mode hook
 (add-hook 'ruby-mode-hook '(lambda ()
