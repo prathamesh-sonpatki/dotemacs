@@ -2,6 +2,10 @@
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
+;; Fix load path
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 ;; set paths
 (setq load-path (cons "~/.emacs.d" load-path))
 (setq root-dir "~/.emacs.d")
