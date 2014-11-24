@@ -15,4 +15,5 @@
 
 (setq web-mode-engines-alist '(("erb" . "\\.erb\\'")))
 
+(setq web-mode-markup-indent-offset 2)
 ;;; web.el ends here
