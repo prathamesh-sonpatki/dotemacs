@@ -24,3 +24,4 @@ projectile-bookmarks.eld
 .cask
 projectile.cache
 .mc-lists.el
+org-clock-save.el
