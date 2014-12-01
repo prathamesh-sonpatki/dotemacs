@@ -23,6 +23,9 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ;; Magit Rules
-;;(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x g") 'magit-status)
 
+;; Neotree
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
 (provide 'pps-keybindings)
