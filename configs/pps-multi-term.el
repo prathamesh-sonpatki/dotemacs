@@ -1,13 +1,13 @@
 ;; multi-term
 
-(setq multi-term-program "/bin/zsh -l")
+(setq multi-term-program "/bin/bash -l")
 
 (when (require 'multi-term nil t)
   (global-set-key (kbd "<f5>") 'multi-term)
   (global-set-key (kbd "<C-next>") 'multi-term-next)
   (global-set-key (kbd "<C-prior>") 'multi-term-prev)
   (setq multi-term-buffer-name "term"
-        multi-term-program "/bin/zsh"))
+        multi-term-program "/bin/bash"))
 
 (when (require 'term nil t) ; only if term can be loaded..
   (setq term-bind-key-alist
