@@ -6,11 +6,11 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'mbo70s t)
+(load-theme 'zenburn t)
 
 ;; Custom Font
 (set-frame-font "Source Code Pro")
-(set-face-attribute 'default nil :font "Source Code Pro" :height 210)
+(set-face-attribute 'default nil :font "Source Code Pro" :height 150)
 (set-face-font 'default "Source Code Pro")
 
 ;; Start in full screen mode
