@@ -21,8 +21,5 @@
 ;; add rubocop - Ruby static code analyzer
 (add-hook 'enh-ruby-mode-hook 'rubocop-mode)
 
-(custom-set-variables
- '(rspec-use-bundler-when-possible t)
- '(rspec-use-rvm t)
- '(rspec-use-zeus-when-possible t)
-)
+;; Disable Rspec Verifiable mode
+(setq rspec-verifiable-mode nil)
