@@ -5,6 +5,8 @@
 
 ;;; Code
 
+(require 'flycheck)
+
 (flycheck-define-checker jsxhint-checker
   "A JSX syntax and style checker based on JSXHint."
 

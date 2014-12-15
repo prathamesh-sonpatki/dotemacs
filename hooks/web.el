@@ -8,6 +8,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))      ;; erb
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))    ;; plain html
+(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))     ;; jsx
 
 (set-face-attribute 'web-mode-html-tag-face nil :foreground "Orange")
 (set-face-attribute 'web-mode-html-attr-name-face nil :foreground "Purple")
