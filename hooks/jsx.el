@@ -16,7 +16,8 @@
                            (flycheck-select-checker 'jsxhint-checker)
                            (flycheck-mode)))
 
-(add-hook 'jsx-mode-hook
-          (lambda () (auto-complete-mode 1)))
+(add-hook 'jsx-mode-hook (lambda () (auto-complete-mode 1)))
+
+(add-hook 'jsx-mode-hook (lambda () (tern-mode t)))
 
 ;;; jsx.el ends here
