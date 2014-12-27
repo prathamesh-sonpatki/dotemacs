@@ -6,12 +6,10 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'zenburn t)
+(load-theme 'monokai t)
 
-;; Custom Font
-(set-frame-font "Source Code Pro")
-(set-face-attribute 'default nil :font "Source Code Pro" :height 150)
-(set-face-font 'default "Source Code Pro")
+;; Font
+(set-default-font "Monaco 18")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
@@ -108,4 +106,22 @@
 (require 'jsx-mode)
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
 (setq jsx-indent-level 2)
+
+(require 'org-projectile)
+(setq org-projectile:projects-file
+      "/Users/prathamesh/Notes/projects.org")
+(add-to-list 'org-capture-templates (org-projectile:project-todo-entry))
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c n p") 'org-projectile:project-todo-completing-read)
+
+;; anzu
+(require 'anzu)
+(global-anzu-mode +1)
+(global-set-key (kbd "M-%") 'anzu-query-replace)
+(global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp)
+
+;; yasnippet
+(require 'yasnippet)
+(yas-global-mode 1)
+
 ;;; pps-settings ends here
