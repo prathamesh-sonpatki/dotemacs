@@ -124,4 +124,6 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
+(require 'ace-jump-mode)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 ;;; pps-settings ends here
