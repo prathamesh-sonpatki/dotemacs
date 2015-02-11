@@ -17,7 +17,7 @@
 (setq web-mode-engines-alist '(("erb" . "\\.erb\\'")))
 
 (setq web-mode-markup-indent-offset 2)
-(setq web-mode-html-offset   2)
-(setq web-mode-css-offset    2)
-(setq web-mode-script-offset 2)
+(setq web-mode-html-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
+(setq web-mode-code-indent-offset 2)
 ;;; web.el ends here
