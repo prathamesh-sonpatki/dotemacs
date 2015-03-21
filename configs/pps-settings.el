@@ -9,7 +9,7 @@
 (load-theme 'monokai t)
 
 ;; Font
-(set-default-font "Monaco 15")
+(set-frame-font "Monaco 18")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)

@@ -21,6 +21,7 @@
 (require 'pps-multi-term)
 (require 'pps-settings)
 (require 'pps-keybindings)
+(require 'pps-org)
 
 ;; load the packages
 (mapcar 'load (directory-files pkgs-dir t "\\.el\\'"))
