@@ -73,6 +73,9 @@
 (define-key global-map "\C-ct"
         (lambda () (interactive) (org-capture nil "t")))
 
+(define-key global-map "\C-cj"
+        (lambda () (interactive) (org-capture nil "j")))
+
 (define-key global-map "\C-cl"
         (lambda () (interactive) (org-capture nil "l")))
 

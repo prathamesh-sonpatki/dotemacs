@@ -6,10 +6,10 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'monokai t)
+(load-theme 'zenburn t)
 
 ;; Font
-(set-frame-font "Monaco 18")
+(set-frame-font "Monaco 15")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
