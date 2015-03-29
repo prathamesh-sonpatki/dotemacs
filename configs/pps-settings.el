@@ -6,10 +6,10 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'zenburn t)
+(load-theme 'tango-dark t)
 
 ;; Font
-(set-frame-font "Monaco 15")
+(set-frame-font "Monaco 19")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
@@ -126,4 +126,10 @@
 
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
+;; Customize highlight color for Tango theme
+(global-hl-line-mode 1)
+(set-face-background 'hl-line "#000")
+(set-face-foreground 'highlight nil)
+
 ;;; pps-settings ends here
