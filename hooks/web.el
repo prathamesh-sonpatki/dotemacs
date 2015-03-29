@@ -8,7 +8,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))      ;; erb
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))    ;; plain html
-(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))     ;; jsx
+(add-to-list 'auto-mode-alist '("\\.jsx?\\" . web-mode))     ;; jsx
 
 
 (set-face-attribute 'web-mode-html-tag-face nil :foreground "Red")
@@ -21,4 +21,11 @@
 (setq web-mode-html-indent-offset 2)
 (setq web-mode-css-indent-offset 2)
 (setq web-mode-code-indent-offset 2)
+
+(defadvice web-mode-highlight-part (around tweak-jsx activate)
+  (if (equal web-mode-content-type "jsx")
+      (let ((web-mode-enable-part-face nil))
+        ad-do-it)
+    ad-do-it))
+
 ;;; web.el ends here

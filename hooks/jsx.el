@@ -3,9 +3,10 @@
 ;;; Commentary:
 ;;; Hooks for jsx mode
 
-;;; Code
+;;; Code:
 
 (require 'flycheck)
+(require 'jsx-mode)
 
 (flycheck-define-checker jsxhint-checker
   "A JSX syntax and style checker based on JSXHint."
@@ -18,8 +19,9 @@
                            (flycheck-select-checker 'jsxhint-checker)
                            (flycheck-mode)))
 
-(add-hook 'jsx-mode-hook (lambda () (auto-complete-mode 1)))
-
 (add-hook 'jsx-mode-hook (lambda () (tern-mode t)))
 
+(add-to-list 'auto-mode-alist '("\\.jsx?\\" . jsx-mode))
+
+(setq jsx-indent-level 2)
 ;;; jsx.el ends here
