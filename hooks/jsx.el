@@ -21,7 +21,5 @@
 
 (add-hook 'jsx-mode-hook (lambda () (tern-mode t)))
 
-(add-to-list 'auto-mode-alist '("\\.jsx?\\" . jsx-mode))
-
 (setq jsx-indent-level 2)
 ;;; jsx.el ends here
