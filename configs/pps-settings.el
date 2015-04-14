@@ -9,7 +9,7 @@
 (load-theme 'tango-dark t)
 
 ;; Font
-(set-frame-font "Monaco 19")
+(set-frame-font "Monaco 17")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
@@ -101,11 +101,6 @@
 (set-keyboard-coding-system 'utf-8) ; pretty
 (set-selection-coding-system 'utf-8) ; please
 (prefer-coding-system 'utf-8) ; with sugar on top
-
-;; jsx support
-(require 'jsx-mode)
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
-(setq jsx-indent-level 2)
 
 (require 'org-projectile)
 (setq org-projectile:projects-file
