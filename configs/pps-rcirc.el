@@ -15,8 +15,8 @@
                                        "#bangaloreruby"
                                        "#rails-contrib"
                                        "#valu"
-                                       "#doothings"
                                        "#bundler"
+                                       "#reactjs"
                                        ))
                            )
       rcirc-authinfo '(("freenode" nickserv "cha1tanya" "prathamesh"))

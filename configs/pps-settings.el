@@ -6,10 +6,10 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'tango-dark t)
+(load-theme 'solarized-dark t)
 
 ;; Font
-(set-frame-font "Monaco 17")
+(set-frame-font "Inconsolata XL 17")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
@@ -123,8 +123,12 @@
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 ;; Customize highlight color for Tango theme
-(global-hl-line-mode 1)
-(set-face-background 'hl-line "#000")
-(set-face-foreground 'highlight nil)
+;; (global-hl-line-mode 1)
+;; (set-face-background 'hl-line "#000")
+;; (set-face-foreground 'highlight nil)
 
+(require 'helm-config)
+(helm-mode 1)
+(helm-adaptative-mode 1)
+(helm-autoresize-mode 1)
 ;;; pps-settings ends here
