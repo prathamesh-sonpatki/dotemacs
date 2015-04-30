@@ -6,13 +6,13 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'solarized-dark t)
+(load-theme 'solarized-light t)
 
 ;; Font
-(set-frame-font "Inconsolata XL 17")
+(set-frame-font "Inconsolata XL 21")
 
 ;; Start in full screen mode
-(toggle-frame-fullscreen)
+;;(toggle-frame-fullscreen)
 
 ; Allows syntax highlighting to work
 (global-font-lock-mode 1)
@@ -54,8 +54,9 @@
 (ido-mode 1)
 (ido-vertical-mode 1)
 
+
 ;; magit
-(require 'magit-commit-training-wheels)
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 ;; ag aka silver search
 (require 'ag)

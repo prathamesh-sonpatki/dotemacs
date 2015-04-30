@@ -7,7 +7,6 @@
   (exec-path-from-shell-initialize))
 
 ;; set paths
-(setq load-path (cons "~/.emacs.d" load-path))
 (setq root-dir "~/.emacs.d")
 (setq configs-dir (concat root-dir "/configs"))
 (setq pkgs-dir (concat root-dir "/pkgs"))

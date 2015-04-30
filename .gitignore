@@ -25,3 +25,4 @@ projectile-bookmarks.eld
 projectile.cache
 .mc-lists.el
 org-clock-save.el
+helm-adaptive-history
