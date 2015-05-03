@@ -9,7 +9,7 @@
 (load-theme 'solarized-light t)
 
 ;; Font
-(set-frame-font "Inconsolata XL 21")
+(set-frame-font "Inconsolata XL 16")
 
 ;; Start in full screen mode
 ;;(toggle-frame-fullscreen)
@@ -130,6 +130,11 @@
 
 (require 'helm-config)
 (helm-mode 1)
-(helm-adaptative-mode 1)
+(helm-adaptive-mode 1)
 (helm-autoresize-mode 1)
+
+;;; osx-clipboard
+(require 'osx-clipboard)
+(osx-clipboard-mode +1)
+
 ;;; pps-settings ends here
