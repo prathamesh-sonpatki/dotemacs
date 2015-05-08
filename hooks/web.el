@@ -8,8 +8,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))      ;; erb
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))    ;; plain html
-(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))     ;; jsx
-
+(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))        ;; jsx
+(add-to-list 'auto-mode-alist '("\\.es6$" . web-mode))        ;; ES6
 
 (set-face-attribute 'web-mode-html-tag-face nil :foreground "Red")
 (set-face-attribute 'web-mode-html-attr-name-face nil :foreground "Blue")
@@ -30,5 +30,13 @@
 (setq web-mode-enable-auto-pairing t)
 
 (setq web-mode-enable-css-colorization t)
+
+;; disable jshint since we prefer eslint checking
+(setq-default flycheck-disabled-checkers
+  (append flycheck-disabled-checkers
+    '(javascript-jshint)))
+
+;; use eslint with web-mode for jsx files
+(flycheck-add-mode 'javascript-eslint 'web-mode)
 
 ;;; web.el ends here
