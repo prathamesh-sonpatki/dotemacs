@@ -41,6 +41,11 @@
 (global-set-key (kbd "s-p") 'projectile-find-file)
 ;; Press Command-b for fuzzy switch buffer
 (global-set-key (kbd "s-b") 'projectile-switch-to-buffer)
+(setq projectile-indexing-method 'alien)
+(add-to-list 'projectile-globally-ignored-directories "elpa")
+(add-to-list 'projectile-globally-ignored-directories ".cache")
+(add-to-list 'projectile-globally-ignored-directories "node_modules")
+(setq projectile-use-git-grep t)
 
 ;; pallet
 (require 'pallet)
@@ -140,5 +145,16 @@
 ;; Emacs server
 (load "server")
 (unless (server-running-p) (server-start))
+
+;; Bash completion
+(require 'bash-completion)
+(bash-completion-setup)
+
+;; Remove C^M from shell output
+(add-hook 'comint-output-filter-functions 'comint-strip-ctrl-m)
+
+;; Idomenu
+(require 'idomenu)
+(autoload 'idomenu "idomenu" nil t)
 
 ;;; pps-settings ends here

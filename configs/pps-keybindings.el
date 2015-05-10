@@ -22,10 +22,25 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
-;; Magit Rules
-(global-set-key (kbd "C-x g") 'magit-status)
+;; Jump to a definition in the current file. (This is awesome.)
+(global-set-key (kbd "C-x C-i") 'idomenu)
 
-;; Neotree
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
+;; git status
+(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x C-g") 'projectile-grep)
+
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-r") 'isearch-backward-regexp)
+(global-set-key (kbd "C-M-s") 'isearch-forward)
+(global-set-key (kbd "C-M-r") 'isearch-backward)
+
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c l") 'org-store-link)
+
+;; Bundler
+(global-set-key (kbd "C-c b i") 'bundle-install)
+(global-set-key (kbd "C-c b o") 'bundle-open)
+
 (provide 'pps-keybindings)
+
+;;; pps-keybindings.el ends here

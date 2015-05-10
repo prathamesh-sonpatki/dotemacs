@@ -51,7 +51,12 @@
 (require 'rbenv)
 (global-rbenv-mode)
 
-;;minitest
+;; Avoid conflicts with rspec-mode
+(add-hook 'minitest-mode-hook (lambda () (rspec-verifiable-mode -1)))
+
+;; Minitest
+
 (add-hook 'ruby-mode-hook 'minitest-mode)
+
 (eval-after-load 'minitest
   '(minitest-install-snippets))

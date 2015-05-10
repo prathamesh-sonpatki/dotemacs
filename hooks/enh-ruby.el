@@ -21,5 +21,5 @@
 ;; add rubocop - Ruby static code analyzer
 (add-hook 'enh-ruby-mode-hook 'rubocop-mode)
 
-;; Disable Rspec Verifiable mode
-(setq rspec-verifiable-mode nil)
+;; turnoff encoding magic
+(setq ruby-insert-encoding-magic-comment nil)
