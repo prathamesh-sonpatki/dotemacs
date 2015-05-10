@@ -137,4 +137,8 @@
 (require 'osx-clipboard)
 (osx-clipboard-mode +1)
 
+;; Emacs server
+(load "server")
+(unless (server-running-p) (server-start))
+
 ;;; pps-settings ends here
