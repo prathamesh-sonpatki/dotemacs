@@ -157,4 +157,7 @@
 (require 'idomenu)
 (autoload 'idomenu "idomenu" nil t)
 
+;; Change default browser for 'browse-url'  to w3m
+(setq browse-url-browser-function 'w3m-goto-url-new-session)
+
 ;;; pps-settings ends here
