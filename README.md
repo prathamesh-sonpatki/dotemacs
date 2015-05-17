@@ -1,12 +1,4 @@
 dotemacs
 ========
 
-My Emacs configuration
-
-
-TODO
-======
-
-* magit configuration
-* org-mode configuration
-* yasnippets configuration
+My Emacs configuration based on internet.
