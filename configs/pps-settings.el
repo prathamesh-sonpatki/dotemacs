@@ -115,6 +115,10 @@
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c n p") 'org-projectile:project-todo-completing-read)
 
+(setq projectile-completion-system 'helm)
+(require 'helm-projectile)
+(helm-projectile-on)
+
 ;; anzu
 (require 'anzu)
 (global-anzu-mode +1)

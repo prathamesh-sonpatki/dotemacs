@@ -9,7 +9,10 @@
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))      ;; erb
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))    ;; plain html
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))        ;; jsx
+(add-to-list 'auto-mode-alist '("\\.js$" . web-mode))         ;; plain JavaScript
 (add-to-list 'auto-mode-alist '("\\.es6$" . web-mode))        ;; ES6
+(add-to-list 'auto-mode-alist '("\\.css$" . web-mode))        ;; CSS
+(add-to-list 'auto-mode-alist '("\\.scss$" . web-mode))        ;; SCSS
 
 (set-face-attribute 'web-mode-html-tag-face nil :foreground "Red")
 (set-face-attribute 'web-mode-html-attr-name-face nil :foreground "Blue")
