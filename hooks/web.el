@@ -30,6 +30,12 @@
         ad-do-it)
     ad-do-it))
 
+(defadvice web-mode-highlight-part (around tweak-jsx activate)
+  (if (equal web-mode-content-type "js")
+      (let ((web-mode-enable-part-face nil))
+        ad-do-it)
+    ad-do-it))
+
 (setq web-mode-enable-auto-pairing t)
 
 (setq web-mode-enable-css-colorization t)
@@ -42,4 +48,8 @@
   ;; use eslint with web-mode for jsx files
   (flycheck-add-mode 'javascript-eslint 'web-mode))
 
+(add-hook 'web-mode-hook
+          (lambda ()
+            (web-mode-set-content-type "jsx")
+            (message "now set to: %s" web-mode-content-type)))
 ;;; web.el ends here
