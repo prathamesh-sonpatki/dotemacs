@@ -6,13 +6,12 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'solarized-light t)
-
+(load-theme 'zenburn)
 ;; Font
-(set-frame-font "Inconsolata XL 16")
+(set-frame-font "Inconsolata XL 18")
 
 ;; Start in full screen mode
-;;(toggle-frame-fullscreen)
+(toggle-frame-fullscreen)
 
 ; Allows syntax highlighting to work
 (global-font-lock-mode 1)
@@ -163,5 +162,8 @@
 
 ;; Change default browser for 'browse-url'  to w3m
 (setq browse-url-browser-function 'w3m-goto-url-new-session)
+
+;; Electric pair mode
+(electric-pair-mode 1)
 
 ;;; pps-settings ends here

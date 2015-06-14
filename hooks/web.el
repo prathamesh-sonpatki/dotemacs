@@ -1,3 +1,5 @@
+;;; package -- Summary:
+
 ;;; Commentary:
 
 ;;; Hooks for web mode
@@ -6,19 +8,13 @@
 
 (require 'web-mode)
 
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))      ;; erb
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))      ;; ERB
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))    ;; plain html
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))        ;; jsx
 (add-to-list 'auto-mode-alist '("\\.js$" . web-mode))         ;; plain JavaScript
 (add-to-list 'auto-mode-alist '("\\.es6$" . web-mode))        ;; ES6
 (add-to-list 'auto-mode-alist '("\\.css$" . web-mode))        ;; CSS
-(add-to-list 'auto-mode-alist '("\\.scss$" . web-mode))        ;; SCSS
-
-(set-face-attribute 'web-mode-html-tag-face nil :foreground "Red")
-(set-face-attribute 'web-mode-html-attr-name-face nil :foreground "Blue")
-(set-face-attribute 'web-mode-doctype-face nil :foreground "Green")
-
-(setq web-mode-engines-alist '(("erb" . "\\.erb\\'")))
+(add-to-list 'auto-mode-alist '("\\.scss$" . web-mode))       ;; SCSS
 
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-css-indent-offset 2)
@@ -52,4 +48,7 @@
           (lambda ()
             (web-mode-set-content-type "jsx")
             (message "now set to: %s" web-mode-content-type)))
+
+(require 'react-snippets)
+
 ;;; web.el ends here

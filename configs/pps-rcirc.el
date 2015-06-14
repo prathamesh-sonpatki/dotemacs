@@ -17,6 +17,7 @@
                                        "#valu"
                                        "#bundler"
                                        "#reactjs"
+                                       "#reactnative"
                                        ))
                            )
       rcirc-authinfo '(("freenode" nickserv "cha1tanya" "prathamesh"))
