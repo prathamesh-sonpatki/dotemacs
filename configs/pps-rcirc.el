@@ -18,6 +18,7 @@
                                        "#bundler"
                                        "#reactjs"
                                        "#reactnative"
+                                       "#elixir-lang"
                                        ))
                            )
       rcirc-authinfo '(("freenode" nickserv "cha1tanya" "prathamesh"))
