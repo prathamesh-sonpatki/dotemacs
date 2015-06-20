@@ -46,8 +46,9 @@
 
 (add-hook 'web-mode-hook
           (lambda ()
-            (web-mode-set-content-type "jsx")
-            (message "now set to: %s" web-mode-content-type)))
+            (if (equal web-mode-content-type "javascript")
+                (web-mode-set-content-type "jsx")
+              (message "now set to: %s" web-mode-content-type))))
 
 (require 'react-snippets)
 
