@@ -6,9 +6,9 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'zenburn)
+(load-theme 'railscasts)
 ;; Font
-(set-frame-font "Inconsolata XL 18")
+(set-frame-font "Anonymous Pro 20")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
@@ -166,5 +166,14 @@
 
 ;; Electric pair mode
 (electric-pair-mode 1)
+
+;; Smart modeline
+(require 'smart-mode-line)
+(sml/setup)
+(setq sml/theme 'dark)
+(setq sml/no-confirm-load-theme t)
+
+;; Git Gutter
+(global-git-gutter-mode +1)
 
 ;;; pps-settings ends here
