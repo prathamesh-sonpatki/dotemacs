@@ -48,6 +48,7 @@
 
 ;; pallet
 (require 'pallet)
+(pallet-mode t)
 
 ;; web-mode
 (require 'web-mode)
