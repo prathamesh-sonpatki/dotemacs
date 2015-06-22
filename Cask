@@ -133,6 +133,7 @@
 (depends-on "paredit")
 (depends-on "pcache")
 (depends-on "pkg-info")
+(depends-on "popup")
 (depends-on "projectile")
 (depends-on "projectile-rails")
 (depends-on "puppet-mode")

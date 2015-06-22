@@ -2,6 +2,7 @@
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 (package-initialize)
+
 ;; Fix load path
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
