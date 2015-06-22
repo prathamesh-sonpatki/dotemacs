@@ -8,13 +8,15 @@
 
 (require 'web-mode)
 
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))      ;; ERB
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))    ;; plain html
-(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))        ;; jsx
-(add-to-list 'auto-mode-alist '("\\.js$" . web-mode))         ;; plain JavaScript
-(add-to-list 'auto-mode-alist '("\\.es6$" . web-mode))        ;; ES6
-(add-to-list 'auto-mode-alist '("\\.css$" . web-mode))        ;; CSS
-(add-to-list 'auto-mode-alist '("\\.scss$" . web-mode))       ;; SCSS
+(add-to-list 'auto-mode-alist '("\\.erb\\'"    . web-mode))   ;; ERB
+(add-to-list 'auto-mode-alist '("\\.html?\\'"  . web-mode))   ;; plain html
+(add-to-list 'auto-mode-alist '("\\.js[x]?\\'" . web-mode))   ;; JS + JSX
+(add-to-list 'auto-mode-alist '("\\.es6\\'"    . web-mode))   ;; ES6
+(add-to-list 'auto-mode-alist '("\\.css\\'"    . web-mode))   ;; CSS
+(add-to-list 'auto-mode-alist '("\\.scss\\'"   . web-mode))   ;; SCSS
+
+(setq web-mode-content-types-alist
+  '(("jsx" . "\\.js[x]?\\'")))
 
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-css-indent-offset 2)
@@ -43,12 +45,6 @@
                         '(javascript-jshint)))
   ;; use eslint with web-mode for jsx files
   (flycheck-add-mode 'javascript-eslint 'web-mode))
-
-(add-hook 'web-mode-hook
-          (lambda ()
-            (if (equal web-mode-content-type "javascript")
-                (web-mode-set-content-type "jsx")
-              (message "now set to: %s" web-mode-content-type))))
 
 (require 'react-snippets)
 
