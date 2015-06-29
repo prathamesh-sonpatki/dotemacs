@@ -6,9 +6,9 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'railscasts)
+(load-theme 'zenburn)
 ;; Font
-(set-frame-font "Anonymous Pro 20")
+(set-frame-font "PT Mono 18")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
