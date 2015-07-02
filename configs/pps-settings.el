@@ -176,4 +176,7 @@
 ;; Git Gutter
 (global-git-gutter-mode +1)
 
+;; No tabs
+(setq-default indent-tabs-mode nil)
+
 ;;; pps-settings ends here
