@@ -41,6 +41,8 @@
 (global-set-key (kbd "C-c b i") 'bundle-install)
 (global-set-key (kbd "C-c b o") 'bundle-open)
 
+;; Helm
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 (provide 'pps-keybindings)
 
 ;;; pps-keybindings.el ends here
