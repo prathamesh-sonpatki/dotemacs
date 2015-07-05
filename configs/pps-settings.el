@@ -6,9 +6,10 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'zenburn)
+(load-theme 'spacemacs-light)
+
 ;; Font
-(set-frame-font "PT Mono 18")
+(set-frame-font "Monaco 18")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
@@ -32,14 +33,11 @@
 (require 'projectile)
 (require 'grizzl)
 (projectile-global-mode)
-(setq projectile-completion-system 'grizzl)
+(setq projectile-completion-system 'helm)
+(helm-projectile-on)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
-(setq projectile-switch-project-action 'projectile-dired)
+(setq projectile-switch-project-action 'helm-projectile)
 (setq projectile-enable-caching t)
-;; Press Command-p for fuzzy find in project
-(global-set-key (kbd "s-p") 'projectile-find-file)
-;; Press Command-b for fuzzy switch buffer
-(global-set-key (kbd "s-b") 'projectile-switch-to-buffer)
 (setq projectile-indexing-method 'alien)
 (add-to-list 'projectile-globally-ignored-directories "elpa")
 (add-to-list 'projectile-globally-ignored-directories ".cache")
@@ -144,6 +142,12 @@
 (helm-mode 1)
 (helm-adaptive-mode 1)
 (helm-autoresize-mode 1)
+(semantic-mode 1)
+(setq helm-semantic-fuzzy-match t
+      helm-imenu-fuzzy-match t)
+(setq helm-locate-fuzzy-match t)
+(setq helm-apropos-fuzzy-match t)
+(setq helm-lisp-fuzzy-completion t)
 
 ;;; osx-clipboard
 (require 'osx-clipboard)
