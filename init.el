@@ -31,3 +31,6 @@
 
 ;; Enable Flycheck mode
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)

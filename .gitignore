@@ -28,3 +28,4 @@ org-clock-save.el
 helm-adaptive-history
 smex-items
 semanticdb
+custom.el
