@@ -27,7 +27,7 @@
   (delete-horizontal-space t)
   (insert " => "))
 
-(define-key ruby-mode-map (kbd "C-.") 'insert-arrow)
+;; (define-key ruby-mode-map (kbd "C-.") 'insert-arrow)
 ;;(define-key rinari-minor-mode-map (kbd "C-.") 'insert-arrow)
 
 ;; inf-ruby
