@@ -3,9 +3,14 @@
 (cask-initialize)
 (package-initialize)
 
+(setq inhibit-splash-screen t)
+
 ;; Fix load path
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
 
 ;; set paths
 (setq root-dir "~/.emacs.d")
@@ -31,6 +36,3 @@
 
 ;; Enable Flycheck mode
 (add-hook 'after-init-hook #'global-flycheck-mode)
-
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
