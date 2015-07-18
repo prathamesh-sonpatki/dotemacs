@@ -27,16 +27,11 @@
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
 
-(provide 'pps-settings)
-
 ;; projectile
 (require 'projectile)
 (require 'grizzl)
 (projectile-global-mode)
-(setq projectile-completion-system 'helm)
-(helm-projectile-on)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
-(setq projectile-switch-project-action 'helm-projectile)
 (setq projectile-enable-caching t)
 (setq projectile-indexing-method 'alien)
 (add-to-list 'projectile-globally-ignored-directories "elpa")
@@ -118,9 +113,10 @@
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c n p") 'org-projectile:project-todo-completing-read)
 
-(setq projectile-completion-system 'helm)
 (require 'helm-projectile)
 (helm-projectile-on)
+(setq projectile-switch-project-action 'helm-projectile)
+(setq projectile-completion-system 'helm)
 
 ;; anzu
 (require 'anzu)
@@ -191,4 +187,9 @@
 ;; No tabs
 (setq-default indent-tabs-mode nil)
 
+;; Alchemist
+
+(require 'alchemist)
+
+(provide 'pps-settings)
 ;;; pps-settings ends here
