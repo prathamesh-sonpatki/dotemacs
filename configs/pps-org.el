@@ -37,8 +37,11 @@
              (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
              (sequence "|" "CANCELED(c)")))
 
+;; Persist org timer across emacs sessions
 (setq org-clock-persist 'history)
-
 (org-clock-persistence-insinuate)
+
+;; Ask for a note when timer is stopped
+(setq org-log-note-clock-out t)
 
 (provide 'pps-org)
