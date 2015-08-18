@@ -6,10 +6,10 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'spacemacs-light)
+(load-theme 'zenburn)
 
 ;; Font
-(set-frame-font "Monaco 18")
+(set-frame-font "Source Code Pro 15")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)

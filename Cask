@@ -23,6 +23,7 @@
 (depends-on "coffee-mode")
 (depends-on "color-theme")
 (depends-on "company")
+(depends-on "company-emoji")
 (depends-on "company-go")
 (depends-on "company-inf-ruby")
 (depends-on "dash")
