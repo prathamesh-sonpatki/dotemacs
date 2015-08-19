@@ -52,6 +52,14 @@
 ;; Press Command-b for fuzzy switch buffer
 (global-set-key (kbd "s-b") 'projectile-switch-to-buffer)
 
+
+;; Avy
+
+(global-set-key (kbd "C-:") 'avy-goto-char)
+(global-set-key (kbd "C-'") 'avy-goto-char-2)
+(global-set-key (kbd "M-g f") 'avy-goto-line)
+(global-set-key (kbd "M-g w") 'avy-goto-word-1)
+
 (provide 'pps-keybindings)
 
 ;;; pps-keybindings.el ends here

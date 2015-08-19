@@ -9,7 +9,7 @@
 (load-theme 'zenburn)
 
 ;; Font
-(set-frame-font "Source Code Pro 15")
+(set-frame-font "Source Code Pro 20")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
@@ -188,8 +188,11 @@
 (setq-default indent-tabs-mode nil)
 
 ;; Alchemist
-
 (require 'alchemist)
+
+;; Avy
+(require 'avy)
+(avy-setup-default)
 
 (provide 'pps-settings)
 ;;; pps-settings ends here
