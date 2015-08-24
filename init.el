@@ -3,6 +3,9 @@
 (cask-initialize)
 (package-initialize)
 
+(let ((default-directory "/usr/local/share/emacs/site-lisp/"))
+  (normal-top-level-add-subdirs-to-load-path))
+
 (setq inhibit-splash-screen t)
 
 ;; Fix load path
