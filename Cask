@@ -64,6 +64,7 @@
 (depends-on "go-autocomplete")
 (depends-on "go-eldoc")
 (depends-on "go-mode")
+(depends-on "go-projectile")
 (depends-on "golden-ratio")
 (depends-on "grizzl")
 (depends-on "guru-mode")
