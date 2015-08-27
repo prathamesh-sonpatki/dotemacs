@@ -154,6 +154,8 @@
 (depends-on "solarized-theme")
 (depends-on "web-beautify")
 (depends-on "web-mode")
+(depends-on "wgrep-ag")
+(depends-on "wgrep-helm")
 (depends-on "with-editor")
 (depends-on "xclip")
 (depends-on "yaml-mode")
