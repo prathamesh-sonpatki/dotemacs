@@ -113,6 +113,7 @@
 (depends-on "monokai-theme")
 (depends-on "multi-term")
 (depends-on "multiple-cursors")
+(depends-on "noctilux-theme")
 (depends-on "noflet")
 (depends-on "org")
 (depends-on "org-present")

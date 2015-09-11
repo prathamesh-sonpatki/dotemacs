@@ -6,10 +6,10 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'zenburn)
+(load-theme 'noctilux)
 
 ;; Font
-(set-frame-font "Source Code Pro 20")
+(set-frame-font "Inconsolata 18")
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
