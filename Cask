@@ -153,6 +153,7 @@
 (depends-on "sml-mode")
 (depends-on "smooth-scrolling")
 (depends-on "solarized-theme")
+(depends-on "ujelly-theme")
 (depends-on "web-beautify")
 (depends-on "web-mode")
 (depends-on "wgrep-ag")

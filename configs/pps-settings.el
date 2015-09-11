@@ -6,7 +6,7 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'noctilux)
+(load-theme 'ujelly)
 
 ;; Font
 (set-frame-font "Inconsolata 18")
