@@ -33,7 +33,7 @@
 (setq org-agenda-include-diary t)
 
 (setq org-todo-keywords
-           '((sequence "TODO(t)" "|" "DONE(d)")
+           '((sequence "TODO(t)" "|" "IN PROGRESS(p)" "WAITING(w)" "DONE(d)")
              (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
              (sequence "|" "CANCELED(c)")))
 
