@@ -6,10 +6,13 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'ujelly)
+(load-theme 'wombat)
 
 ;; Font
-(set-frame-font "Inconsolata 18")
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-17"))
+
+(add-hook 'org-mode-hook
+          (lambda () (face-remap-add-relative 'default :font "DejaVu Sans Mono-17")))
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)

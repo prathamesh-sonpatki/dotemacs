@@ -17,6 +17,7 @@
 (depends-on "bundler")
 (depends-on "cask")
 (depends-on "cider")
+(depends-on "circe")
 (depends-on "clojure-mode")
 (depends-on "clojure-snippets")
 (depends-on "clojurescript-mode")
