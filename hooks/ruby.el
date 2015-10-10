@@ -58,5 +58,8 @@
 
 (add-hook 'ruby-mode-hook 'minitest-mode)
 
+;; Don't add magic comment about coding: utf8
+(setq ruby-insert-encoding-magic-comment nil)
+
 (eval-after-load 'minitest
   '(minitest-install-snippets))
