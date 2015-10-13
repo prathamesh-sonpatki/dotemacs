@@ -134,7 +134,6 @@
 (depends-on "rake")
 (depends-on "rbenv")
 (depends-on "react-snippets")
-(depends-on "reveal-in-finder")
 (depends-on "rich-minority")
 (depends-on "robe")
 (depends-on "rspec-mode")
