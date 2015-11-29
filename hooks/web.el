@@ -18,10 +18,8 @@
 (add-to-list 'auto-mode-alist '("\\.blade\\.php\\'" . web-mode))  ;; Blade template
 
 (setq web-mode-content-types-alist
-   '(("jsx" . "\\.js[x]?\\'")))
-
-(setq web-mode-content-types-alist
-  '(("javascript" . "\\.es6?\\'")))
+      '(("jsx" . "\\.js[x]?\\'")
+        ("javascript" . "\\.es6?\\'")))
 
 (setq web-mode-engines-alist
       '(("blade"  . "\\.blade\\.")))
