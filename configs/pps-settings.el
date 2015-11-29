@@ -189,5 +189,8 @@
 (require 'avy)
 (avy-setup-default)
 
+;; Which key
+(which-key-mode)
+
 (provide 'pps-settings)
 ;;; pps-settings ends here

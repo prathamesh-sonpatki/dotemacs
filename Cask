@@ -158,6 +158,7 @@
 (depends-on "web-mode")
 (depends-on "wgrep-ag")
 (depends-on "wgrep-helm")
+(depends-on "which-key")
 (depends-on "with-editor")
 (depends-on "xclip")
 (depends-on "yaml-mode")
