@@ -6,13 +6,10 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'wombat)
+(load-theme 'leuven)
 
 ;; Font
-(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-17"))
-
-(add-hook 'org-mode-hook
-          (lambda () (face-remap-add-relative 'default :font "DejaVu Sans Mono-17")))
+(add-to-list 'default-frame-alist '(font . "Inconsolata 21"))
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
@@ -177,12 +174,6 @@
 
 ;; Electric pair mode
 (electric-pair-mode 1)
-
-;; Smart modeline
-(require 'smart-mode-line)
-(sml/setup)
-(setq sml/theme 'dark)
-(setq sml/no-confirm-load-theme t)
 
 ;; Git Gutter
 (global-git-gutter-mode +1)
