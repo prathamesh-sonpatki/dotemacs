@@ -9,7 +9,7 @@
 (load-theme 'leuven)
 
 ;; Font
-(add-to-list 'default-frame-alist '(font . "Inconsolata 21"))
+(set-face-attribute 'default nil :font "InputMono" :height 160)
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
