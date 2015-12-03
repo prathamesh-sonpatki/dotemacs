@@ -192,5 +192,8 @@
 ;; Which key
 (which-key-mode)
 
+;; Beacon mode
+(beacon-mode 1)
+
 (provide 'pps-settings)
 ;;; pps-settings ends here

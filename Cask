@@ -13,6 +13,7 @@
 (depends-on "avy")
 (depends-on "babel")
 (depends-on "bash-completion")
+(depends-on "beacon")
 (depends-on "better-defaults")
 (depends-on "bundler")
 (depends-on "cask")
