@@ -45,4 +45,12 @@
 ;; Ask for a note when timer is stopped
 (setq org-log-note-clock-out t)
 
+;; Set sorting strategy
+(setq org-agenda-sorting-strategy
+      (quote
+       ((agenda priority-down time-up tag-up category-keep effort-up)
+        (todo priority-down user-defined-up todo-state-up effort-up)
+        (tags user-defined-up)
+        (search category-keep))))
+
 (provide 'pps-org)
