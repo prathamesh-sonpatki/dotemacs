@@ -9,7 +9,7 @@
 (load-theme 'leuven)
 
 ;; Font
-(set-face-attribute 'default nil :font "InputMono" :height 160)
+(set-face-attribute 'default nil :font "Source Code Pro" :height 190)
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
@@ -188,9 +188,6 @@
 ;; Avy
 (require 'avy)
 (avy-setup-default)
-
-;; Which key
-(which-key-mode)
 
 ;; Beacon mode
 (beacon-mode 1)

@@ -37,6 +37,7 @@
 (depends-on "elixir-mode")
 (depends-on "elixir-yasnippets")
 (depends-on "elm-mode")
+(depends-on "emojify")
 (depends-on "enh-ruby-mode")
 (depends-on "epl")
 (depends-on "erlang")
@@ -170,3 +171,4 @@
 (depends-on "xclip")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
+(depends-on "zenburn")
