@@ -39,3 +39,6 @@
 
 ;; Enable Flycheck mode
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; Font
+(set-face-attribute 'default nil :font "Source Code Pro" :height 230 :width 'expanded)

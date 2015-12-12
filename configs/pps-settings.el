@@ -8,9 +8,6 @@
 ;; Theme
 (load-theme 'leuven)
 
-;; Font
-(set-face-attribute 'default nil :font "Source Code Pro" :height 190)
-
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
 
