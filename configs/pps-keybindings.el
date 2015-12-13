@@ -60,6 +60,10 @@
 (global-set-key (kbd "M-g f") 'avy-goto-line)
 (global-set-key (kbd "M-g w") 'avy-goto-word-1)
 
+;; Elfeed
+
+(global-set-key (kbd "C-x w") 'elfeed)
+
 (provide 'pps-keybindings)
 
 ;;; pps-keybindings.el ends here

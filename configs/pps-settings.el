@@ -189,5 +189,20 @@
 ;; Beacon mode
 (beacon-mode 1)
 
+;; ElFeed
+(setq elfeed-feeds
+      '(("http://feeds.feedburner.com/2ality" javascript)
+        ("http://oremacs.com/atom.xml" emacs)
+        ("http://blog.bigbinary.com/feed.xml" bigbinary)
+        ("https://facebook.github.io/react/feed.xml" react)
+        ("https://babeljs.io/feed.xml" babel javascript)
+        ("http://endlessparentheses.com/atom.xml" emacs)
+        ("http://pragmaticemacs.com/feed/" emacs)
+        ("https://www.reddit.com/r/emacs/.rss" emacs)
+        ("http://sachachua.com/blog/category/emacs/feed/" emacs sachachua)
+        ("http://planet.emacsen.org/atom.xml" emacs)
+        ("http://ergoemacs.org/emacs/blog.xml" emacs)
+        ))
+
 (provide 'pps-settings)
 ;;; pps-settings ends here
