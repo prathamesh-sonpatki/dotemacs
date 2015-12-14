@@ -41,4 +41,7 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; Font
-(set-face-attribute 'default nil :font "Source Code Pro" :height 230 :width 'expanded)
+(set-face-attribute 'default nil
+                    :font "Source Code Pro Medium"
+                    :height 240
+                    :weight 'normal)
