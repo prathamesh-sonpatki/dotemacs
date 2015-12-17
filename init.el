@@ -23,11 +23,11 @@
 (load custom-file)
 
 ;; set paths
-(setq root-dir "~/.emacs.d")
-(setq configs-dir (concat root-dir "/configs"))
-(setq pkgs-dir (concat root-dir "/pkgs"))
-(setq hooks-dir (concat root-dir "/hooks"))
-(setq logs-dir (concat root-dir "/logs"))
+(defvar root-dir "~/.emacs.d")
+(defvar configs-dir (concat root-dir "/configs"))
+(defvar pkgs-dir (concat root-dir "/pkgs"))
+(defvar hooks-dir (concat root-dir "/hooks"))
+(defvar logs-dir (concat root-dir "/logs"))
 
 ;; load configs
 (add-to-list 'load-path configs-dir)
