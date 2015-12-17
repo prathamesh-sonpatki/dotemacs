@@ -1,5 +1,12 @@
+;;; package --- Summary
+
+;;; Commentary:
+
+;;; Code:
+
 ;; initialize cask
 (require 'cask "~/.cask/cask.el")
+
 (cask-initialize)
 (package-initialize)
 
@@ -43,5 +50,7 @@
 ;; Font
 (set-face-attribute 'default nil
                     :font "Source Code Pro Medium"
-                    :height 240
+                    :height 170
                     :weight 'normal)
+
+;;; init.el ends here
