@@ -31,8 +31,6 @@
 (define-key global-map "\C-cl"
         (lambda () (interactive) (org-capture nil "l")))
 
-(setq org-agenda-include-diary t)
-
 (setq org-todo-keywords
            '((sequence "TODO(t)" "IN PROGRESS(p)" "WAITING(w)" "|" "DONE(d)" "CANCELED(c)" "DELEGATED(g)")
              (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")
