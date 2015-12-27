@@ -23,3 +23,45 @@
 
 ;; turnoff encoding magic
 (setq ruby-insert-encoding-magic-comment nil)
+
+;; Ruby mode hook
+(add-hook 'enh-ruby-mode-hook '(lambda ()
+                             (setq ruby-deep-arglist t)
+                             (setq ruby-deep-indent-paren nil)
+                             (setq c-tab-always-indent nil)
+                             (require 'inf-ruby)
+                             (require 'ruby-compilation)))
+
+;; inf-ruby
+(autoload 'inf-ruby "inf-ruby" "Run an inferior Ruby process" t)
+(add-hook 'enh-ruby-mode-hook 'inf-ruby-minor-mode)
+(add-hook 'enh-ruby-mode-hook 'inf-ruby-minor-mode)
+(add-hook 'after-init-hook 'inf-ruby-switch-setup)
+
+;; robe
+(add-hook 'enh-ruby-mode-hook 'robe-mode)
+(add-hook 'enh-ruby-mode-hook 'robe-mode)
+
+
+;; Bundler
+(require 'bundler)
+
+;; add rubocop - Ruby static code analyzer
+(add-hook 'enh-ruby-mode-hook 'rubocop-mode)
+
+;;rbnenv
+(require 'rbenv)
+(global-rbenv-mode)
+
+;; Avoid conflicts with rspec-mode
+(add-hook 'minitest-mode-hook (lambda () (rspec-verifiable-mode -1)))
+
+;; Minitest
+
+(add-hook 'enh-ruby-mode-hook 'minitest-mode)
+
+;; Don't add magic comment about coding: utf8
+(setq ruby-insert-encoding-magic-comment nil)
+
+(eval-after-load 'minitest
+  '(minitest-install-snippets))
