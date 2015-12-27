@@ -52,7 +52,7 @@
 
 
 ;; magit
-(setq magit-last-seen-setup-instructions "1.4.0")
+(defvar magit-last-seen-setup-instructions "1.4.0")
 
 ;; ag aka silver search
 (require 'ag)
