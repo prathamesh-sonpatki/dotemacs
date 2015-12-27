@@ -206,6 +206,53 @@
     ("http://feeds.feedburner.com/PlataformaBlog" ruby elixir)
     ))
 
+;; Don't warn me about large files
+(setq large-file-warning-threshold nil)
+
+;; Ask for confirmation before closing emacs
+(setq confirm-kill-emacs 'yes-or-no-p)
+
+;; Always reload the file if it changed on disk
+(global-auto-revert-mode 1)
+
+(require 'fullframe)
+(fullframe magit-status magit-mode-quit-window nil)
+
+;; I want this for dired-jump
+(require 'dired-x)
+
+;; I usually want to see just the file names
+(require 'dired-details)
+(dired-details-install)
+
+;; Nice listing
+(setq find-ls-option '("-print0 | xargs -0 ls -alhd" . ""))
+
+;; Always copy/delete recursively
+(setq dired-recursive-copies (quote always))
+(setq dired-recursive-deletes (quote top))
+
+;; Auto refresh dired, but be quiet about it
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
+
+;; Hide some files
+(setq dired-omit-files "^\\..*$\\|^\\.\\.$")
+(setq dired-omit-mode t)
+
+;; List directories first
+(defun sof/dired-sort ()
+  "Dired sort hook to list directories first."
+  (save-excursion
+   (let (buffer-read-only)
+     (forward-line 2) ;; beyond dir. header
+     (sort-regexp-fields t "^.*$" "[ ]*." (point) (point-max))))
+  (and (featurep 'xemacs)
+       (fboundp 'dired-insert-set-properties)
+       (dired-insert-set-properties (point-min) (point-max)))
+  (set-buffer-modified-p nil))
+
+(add-hook 'dired-after-readin-hook 'sof/dired-sort)
 
 (provide 'pps-settings)
 ;;; pps-settings ends here
