@@ -16,10 +16,6 @@
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/Notes/todo.org" "Tasks")
-             "* TODO %?\n  %i\n  %a")
-        ("j" "Journal" entry (file+datetree "~/Notes/journal.org")
-             "* %?\nEntered on %U\n  %i\n  %a")
-        ("l" "Learning" entry (file+datetree "~/Notes/learning.org")
              "* TODO %?\n  %i\n  %a")))
 
 (define-key global-map "\C-ct"
