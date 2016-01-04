@@ -6,7 +6,9 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'leuven)
+;; (load-theme 'leuven)
+(load-theme 'tango-dark)
+;; (load-theme 'zenburn)
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)

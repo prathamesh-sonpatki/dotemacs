@@ -140,6 +140,7 @@
 (depends-on "rake")
 (depends-on "rbenv")
 (depends-on "react-snippets")
+(depends-on "request")
 (depends-on "rich-minority")
 (depends-on "robe")
 (depends-on "rspec-mode")
@@ -171,3 +172,4 @@
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
 (depends-on "zenburn")
+(depends-on "zenburn-theme")
