@@ -42,6 +42,7 @@
 (global-set-key (kbd "C-c b o") 'bundle-open)
 
 ;; Helm
+(global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-c h o") 'helm-occur)
 (global-set-key (kbd "C-c h g") 'helm-google-suggest)
