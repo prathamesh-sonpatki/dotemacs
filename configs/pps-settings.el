@@ -256,5 +256,9 @@
 
 (add-hook 'dired-after-readin-hook 'sof/dired-sort)
 
+;; Aggressive indent
+(global-aggressive-indent-mode 1)
+(add-to-list 'aggressive-indent-excluded-modes 'web-mode)
+
 (provide 'pps-settings)
 ;;; pps-settings ends here

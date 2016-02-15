@@ -4,6 +4,7 @@
 
 (depends-on "ace-jump-mode")
 (depends-on "ag")
+(depends-on "aggressive-indent")
 (depends-on "alchemist")
 (depends-on "alert")
 (depends-on "anything")
