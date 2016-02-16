@@ -52,7 +52,6 @@
 (ido-mode 1)
 (ido-vertical-mode 1)
 
-
 ;; magit
 (defvar magit-last-seen-setup-instructions "1.4.0")
 
