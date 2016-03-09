@@ -7,8 +7,9 @@
 
 ;; Theme
 ;; (load-theme 'leuven)
-(load-theme 'tango-dark)
+;; (load-theme 'tango-dark)
 ;; (load-theme 'zenburn)
+(load-theme 'gruvbox)
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
@@ -256,8 +257,8 @@
 (add-hook 'dired-after-readin-hook 'sof/dired-sort)
 
 ;; Aggressive indent
-(global-aggressive-indent-mode 1)
-(add-to-list 'aggressive-indent-excluded-modes 'web-mode)
+;; (global-aggressive-indent-mode 1)
+;; (add-to-list 'aggressive-indent-excluded-modes 'web-mode)
 
 (provide 'pps-settings)
 ;;; pps-settings ends here

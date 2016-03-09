@@ -74,6 +74,7 @@
 (depends-on "golden-ratio")
 (depends-on "goto-chg")
 (depends-on "grizzl")
+(depends-on "gruvbox-theme")
 (depends-on "guru-mode")
 (depends-on "haml-mode")
 (depends-on "haskell-mode")
