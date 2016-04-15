@@ -65,3 +65,8 @@
 
 (eval-after-load 'minitest
   '(minitest-install-snippets))
+
+;; Mutant
+(require 'mutant)
+(add-hook 'ruby-mode-hook 'mutant-mode)
+(add-hook 'dired-mode-hook 'mutant-dired-mode)
