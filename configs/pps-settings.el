@@ -6,10 +6,12 @@
 ;;; Code:
 
 ;; Theme
-;; (load-theme 'leuven)
+(load-theme 'leuven)
 ;; (load-theme 'tango-dark)
 ;; (load-theme 'zenburn)
-(load-theme 'gruvbox)
+;; (load-theme 'gruvbox)
+;; (load-theme 'monokai)
+;; (load-theme 'dichromacy)
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
