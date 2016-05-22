@@ -108,13 +108,6 @@
 (set-selection-coding-system 'utf-8) ; please
 (prefer-coding-system 'utf-8) ; with sugar on top
 
-(require 'org-projectile)
-(setq org-projectile:projects-file
-      "/Users/prathamesh/Notes/projects.org")
-(add-to-list 'org-capture-templates (org-projectile:project-todo-entry))
-(global-set-key (kbd "C-c c") 'org-capture)
-(global-set-key (kbd "C-c n p") 'org-projectile:project-todo-completing-read)
-
 (require 'helm-projectile)
 (helm-projectile-on)
 (setq projectile-switch-project-action 'helm-projectile)
