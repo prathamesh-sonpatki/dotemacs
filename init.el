@@ -32,7 +32,6 @@
 ;; load configs
 (add-to-list 'load-path configs-dir)
 
-(require 'pps-rcirc)
 (require 'pps-multi-term)
 (require 'pps-settings)
 (require 'pps-keybindings)
@@ -49,9 +48,9 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Source Code Pro Medium"
-                    :height 170
-                    :weight 'normal)
+                    :font "Source Code Pro"
+                    :height 200
+                    :weight 'regular)
 
 (defun toggle-selective-display (column)
   (interactive "P")
