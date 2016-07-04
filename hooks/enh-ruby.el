@@ -21,9 +21,6 @@
 ;; add rubocop - Ruby static code analyzer
 (add-hook 'enh-ruby-mode-hook 'rubocop-mode)
 
-;; turnoff encoding magic
-(setq ruby-insert-encoding-magic-comment nil)
-
 ;; Ruby mode hook
 (add-hook 'enh-ruby-mode-hook '(lambda ()
                              (setq ruby-deep-arglist t)
@@ -62,6 +59,7 @@
 
 ;; Don't add magic comment about coding: utf8
 (setq ruby-insert-encoding-magic-comment nil)
+(setq enh-ruby-add-encoding-comment-on-save nil)
 
 (eval-after-load 'minitest
   '(minitest-install-snippets))
