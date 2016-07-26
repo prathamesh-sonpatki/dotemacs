@@ -49,8 +49,8 @@
 ;; Font
 (set-face-attribute 'default nil
                     :font "SF Mono"
-                    :height 250
-                    :weight 'light)
+                    :height 160
+                    :weight 'regular)
 
 (defun toggle-selective-display (column)
   (interactive "P")

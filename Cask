@@ -118,6 +118,7 @@
 (depends-on "magit-popup")
 (depends-on "man-commands")
 (depends-on "markdown-mode")
+(depends-on "marshal")
 (depends-on "minitest")
 (depends-on "mo-git-blame")
 (depends-on "molokai-theme")

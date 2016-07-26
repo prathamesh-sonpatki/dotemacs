@@ -10,8 +10,8 @@
 ;; (load-theme 'tango-dark)
 ;; (load-theme 'zenburn)
 ;; (load-theme 'gruvbox)
-(load-theme 'monokai)
-;; (load-theme 'dichromacy)
+;; (load-theme 'monokai)
+(load-theme 'dichromacy)
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
