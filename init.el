@@ -1,3 +1,4 @@
+
 ;;; package --- Summary
 
 ;;; Commentary:
@@ -10,14 +11,20 @@
 (cask-initialize)
 (package-initialize)
 
-(let ((default-directory "/usr/local/share/emacs/site-lisp/"))
-  (normal-top-level-add-subdirs-to-load-path))
-
-(setq inhibit-splash-screen t)
+(exec-path-from-shell-copy-env "GPG_TTY")
+(exec-path-from-shell-copy-env "GIT_MERGE_AUTOEDIT")
+(exec-path-from-shell-copy-env "GOPATH")
+(exec-path-from-shell-copy-env "BUNDLER_EDITOR")
+(exec-path-from-shell-copy-env "ANDROID_HOME")
 
 ;; Fix load path
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+
+(let ((default-directory "/usr/local/share/emacs/site-lisp/"))
+  (normal-top-level-add-subdirs-to-load-path))
+
+(setq inhibit-splash-screen t)
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
@@ -49,7 +56,7 @@
 ;; Font
 (set-face-attribute 'default nil
                     :font "SF Mono"
-                    :height 160
+                    :height 200
                     :weight 'regular)
 
 (defun toggle-selective-display (column)
@@ -74,4 +81,5 @@
 (add-hook 'c-mode-common-hook   'hs-minor-mode)
 (add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
 (add-hook 'enh-ruby-mode-hook         'hs-minor-mode)
+(put 'dired-find-alternate-file 'disabled nil)
 ;;; init.el ends here
