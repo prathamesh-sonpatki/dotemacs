@@ -7,11 +7,11 @@
 
 ;; Theme
 ;; (load-theme 'leuven)
-;; (load-theme 'tango-dark)
+(load-theme 'dracula)
 ;; (load-theme 'zenburn)
 ;; (load-theme 'gruvbox)
 ;; (load-theme 'monokai)
-(load-theme 'dichromacy)
+;; (load-theme 'dichromacy)
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
