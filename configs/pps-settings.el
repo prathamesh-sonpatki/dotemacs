@@ -255,5 +255,9 @@
 ;; (global-aggressive-indent-mode 1)
 ;; (add-to-list 'aggressive-indent-excluded-modes 'web-mode)
 
+;; SML settings for Proglang
+(setenv "PATH" (concat "/usr/local/smlnj/bin:" (getenv "PATH")))
+(setq exec-path (cons "/usr/local/smlnj/bin"  exec-path))
+
 (provide 'pps-settings)
 ;;; pps-settings ends here
