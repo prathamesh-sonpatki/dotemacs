@@ -1,4 +1,3 @@
-
 ;;; package --- Summary
 
 ;;; Commentary:
@@ -42,7 +41,7 @@
 (require 'pps-multi-term)
 (require 'pps-settings)
 (require 'pps-keybindings)
-(require 'pps-org)
+(require 'pps-new-org)
 
 ;; load the packages
 (mapcar 'load (directory-files pkgs-dir t "\\.el\\'"))
@@ -55,9 +54,9 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Monaco"
-                    :height 180
-                    :weight 'bold)
+                    :font "Inconsolata"
+                    :height 220
+                    :weight 'regular)
 
 (defun toggle-selective-display (column)
   (interactive "P")

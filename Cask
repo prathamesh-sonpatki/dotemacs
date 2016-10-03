@@ -127,6 +127,7 @@
 (depends-on "man-commands")
 (depends-on "markdown-mode")
 (depends-on "marshal")
+(depends-on "melancholy-theme")
 (depends-on "minitest")
 (depends-on "mo-git-blame")
 (depends-on "molokai-theme")

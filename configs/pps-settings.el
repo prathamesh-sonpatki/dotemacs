@@ -6,7 +6,7 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'leuven)
+;; (load-theme 'leuven)
 ;; (load-theme 'dracula)
 ;; (load-theme 'zenburn)
 ;; (load-theme 'gruvbox)
