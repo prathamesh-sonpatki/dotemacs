@@ -23,8 +23,8 @@
                                "~/org/personal/rails")))
 
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "NEXT(n)" "|" "In Progress(p)" "DONE(d)")
-              (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "MEETING"))))
+      (quote ((sequence "TODO(t)" "NEXT(n)" "|")
+              (sequence "WAITING(w@/!)" "HOLD(h@/!)" "In Progress(p)" "DONE(d)" "|" "CANCELLED(c@/!)" "MEETING"))))
 
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "red" :weight bold)
