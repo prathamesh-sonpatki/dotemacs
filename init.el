@@ -41,7 +41,7 @@
 (require 'pps-multi-term)
 (require 'pps-settings)
 (require 'pps-keybindings)
-(require 'pps-new-org)
+(require 'pps-org)
 
 ;; load the packages
 (mapcar 'load (directory-files pkgs-dir t "\\.el\\'"))
@@ -55,8 +55,8 @@
 ;; Font
 (set-face-attribute 'default nil
                     :font "Inconsolata"
-                    :height 220
-                    :weight 'regular)
+                    :height 240
+                    :weight 'bold)
 
 (defun toggle-selective-display (column)
   (interactive "P")
