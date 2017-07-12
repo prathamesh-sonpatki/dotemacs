@@ -55,8 +55,8 @@
 ;; Font
 (set-face-attribute 'default nil
                     :font "Inconsolata"
-                    :height 240
-                    :weight 'bold)
+                    :height 200
+                    :weight 'regular)
 
 (defun toggle-selective-display (column)
   (interactive "P")
@@ -81,4 +81,9 @@
 (add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
 (add-hook 'enh-ruby-mode-hook         'hs-minor-mode)
 (put 'dired-find-alternate-file 'disabled nil)
+
+(setq backup-directory-alist `(("." . "~/.saves")))
+
+;; (desktop-save-mode 1)
+
 ;;; init.el ends here
