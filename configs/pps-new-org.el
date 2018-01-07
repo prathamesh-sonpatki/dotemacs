@@ -5,6 +5,7 @@
 ;;;
 
 (add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
+
 ;; (add-to-list 'org-modules 'org-habit)
 (require 'org)
 
@@ -23,8 +24,8 @@
                                "~/org/personal/rails")))
 
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "NEXT(n)" "|")
-              (sequence "WAITING(w@/!)" "HOLD(h@/!)" "In Progress(p)" "DONE(d)" "|" "CANCELLED(c@/!)" "MEETING"))))
+      (quote ((sequence "TODO(t)" "NEXT(n)" "|" "WAITING(w@/!)" "HOLD(h@/!)" "In Progress(p)" "DONE(d)")
+              (sequence  "|" "CANCELLED(c@/!)" "MEETING"))))
 
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "red" :weight bold)
