@@ -54,7 +54,7 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Inconsolata"
+                    :font "Menlo"
                     :height 200
                     :weight 'regular)
 
