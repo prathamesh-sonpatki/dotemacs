@@ -272,5 +272,8 @@
           (lambda ()
             (setq company-backends '(company-elm))))
 
+;; EPUB mode
+(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+
 (provide 'pps-settings)
 ;;; pps-settings ends here
