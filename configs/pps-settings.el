@@ -23,9 +23,6 @@
 ;; Display time
 (display-time-mode t)
 
-;; linum mode
-(global-linum-mode t)
-
 ;;; No GUI
 (dolist (mode '(menu-bar-mode tool-bar-mode scroll-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
