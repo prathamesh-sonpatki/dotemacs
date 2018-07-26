@@ -28,9 +28,10 @@
   (when (fboundp mode) (funcall mode -1)))
 
 ;; projectile
+(setq projectile-keymap-prefix (kbd "C-c p"))
 (require 'projectile)
 (require 'grizzl)
-(projectile-global-mode)
+(projectile-mode 1)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 (setq projectile-enable-caching t)
 (setq projectile-indexing-method 'alien)
@@ -48,8 +49,6 @@
 (require 'web-mode)
 
 ;; ido
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
 (ido-mode 1)
 (ido-vertical-mode 1)
 
