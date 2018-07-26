@@ -54,9 +54,9 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Menlo"
-                    :height 200
-                    :weight 'regular)
+                    :font "Source Code Pro"
+                    :height 220
+                    :weight 'medium)
 
 (defun toggle-selective-display (column)
   (interactive "P")
