@@ -50,6 +50,7 @@
 (depends-on "enh-ruby-mode")
 (depends-on "epl")
 (depends-on "erlang")
+(depends-on "esxml")
 (depends-on "exec-path-from-shell")
 (depends-on "f")
 (depends-on "faceup")
