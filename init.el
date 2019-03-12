@@ -84,6 +84,7 @@
 
 (setq backup-directory-alist `(("." . "~/.saves")))
 
+(setq-default show-trailing-whitespace t)
 ;; (desktop-save-mode 1)
 
 ;;; init.el ends here
