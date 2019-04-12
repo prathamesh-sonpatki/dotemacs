@@ -12,7 +12,7 @@
 ;; (load-theme 'gruvbox)
 ;; (load-theme 'monokai)
 ;; (load-theme 'dichromacy)
-;; (load-theme 'tango-dark)
+;; (load-theme 'tango-light)
 
 ;; Start in full screen mode
 (toggle-frame-fullscreen)
@@ -47,6 +47,9 @@
 
 ;; web-mode
 (require 'web-mode)
+
+;; rjsx-mode
+(require 'rjsx-mode)
 
 ;; ido
 (ido-mode 1)
@@ -270,6 +273,14 @@
 
 ;; EPUB mode
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+
+;; Emacs client
+(add-hook 'server-switch-hook
+            (lambda ()
+              (when (current-local-map)
+                (use-local-map (copy-keymap (current-local-map))))
+	      (when server-buffer-clients
+		(local-set-key (kbd "C-x k") 'server-edit))))
 
 (provide 'pps-settings)
 ;;; pps-settings ends here
