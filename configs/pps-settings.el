@@ -282,5 +282,9 @@
 	      (when server-buffer-clients
 		(local-set-key (kbd "C-x k") 'server-edit))))
 
+;; Rainbow
+(require 'rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
 (provide 'pps-settings)
 ;;; pps-settings ends here

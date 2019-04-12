@@ -54,7 +54,7 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Source Code Pro"
+                    :font "Source Code Variable"
                     :height 220
                     :weight 'medium)
 
