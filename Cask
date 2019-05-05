@@ -125,6 +125,7 @@
 (depends-on "inflections")
 (depends-on "io-mode")
 (depends-on "ivy")
+(depends-on "js2-mode")
 (depends-on "json-mode")
 (depends-on "json-reformat")
 (depends-on "json-snatcher")
