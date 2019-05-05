@@ -283,8 +283,11 @@
 		(local-set-key (kbd "C-x k") 'server-edit))))
 
 ;; Rainbow
-(require 'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+;; SICP
+(setq scheme-program-name "~/bin/mit-scheme")
+(require 'xscheme)
 
 (provide 'pps-settings)
 ;;; pps-settings ends here
