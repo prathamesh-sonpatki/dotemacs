@@ -34,3 +34,4 @@ network-security.data
 .emacs.desktop
 transient/
 configs/flycheck_pps-settings.el
+ido.last
