@@ -31,6 +31,7 @@
 (depends-on "company-inf-ruby")
 (depends-on "ctags")
 (depends-on "dash")
+(depends-on "dash-docs")
 (depends-on "deferred")
 (depends-on "diminish")
 (depends-on "dired-details")

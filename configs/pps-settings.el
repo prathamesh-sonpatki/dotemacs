@@ -285,9 +285,5 @@
 ;; Rainbow
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
-;; SICP
-(setq scheme-program-name "~/bin/mit-scheme")
-(require 'xscheme)
-
 (provide 'pps-settings)
 ;;; pps-settings ends here
