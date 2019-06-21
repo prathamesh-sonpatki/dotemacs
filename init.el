@@ -54,9 +54,10 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Source Code Variable"
+                    :font "Inconsolata"
                     :height 220
-                    :weight 'medium)
+                    :weight 'regular)
+
 
 (defun toggle-selective-display (column)
   (interactive "P")

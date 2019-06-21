@@ -6,7 +6,7 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'leuven)
+;; (load-theme 'leuven)
 ;; (load-theme 'dracula)
 ;; (load-theme 'zenburn)
 ;; (load-theme 'gruvbox)
@@ -57,6 +57,23 @@
 
 ;; magit
 (defvar magit-last-seen-setup-instructions "1.4.0")
+
+;; https://endlessparentheses.com/create-github-prs-from-emacs-with-magit.html
+(defun endless/visit-pull-request-url ()
+  "Visit the current branch's PR on Github."
+  (interactive)
+  (browse-url
+   (format "https://github.com/%s/pull/new/%s"
+           (replace-regexp-in-string
+            "\\`.+github\\.com:\\(.+\\)\\.git\\'" "\\1"
+            (magit-get "remote"
+                       (magit-get-push-remote)
+                       "url"))
+           (magit-get-current-branch))))
+
+(eval-after-load 'magit
+  '(define-key magit-mode-map "v"
+     #'endless/visit-pull-request-url))
 
 ;; ag aka silver search
 (require 'ag)
@@ -284,6 +301,9 @@
 
 ;; Rainbow
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+;; Set default browser as default OS X browser
+(setq browse-url-browser-function 'browse-url-default-macosx-browser)
 
 (provide 'pps-settings)
 ;;; pps-settings ends here
