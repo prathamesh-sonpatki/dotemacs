@@ -10,7 +10,7 @@
 ;; (load-theme 'dracula)
 ;; (load-theme 'zenburn)
 ;; (load-theme 'gruvbox)
-;; (load-theme 'monokai)
+(load-theme 'monokai)
 ;; (load-theme 'dichromacy)
 ;; (load-theme 'tango-light)
 
@@ -236,8 +236,8 @@
 (require 'dired-x)
 
 ;; I usually want to see just the file names
-(require 'dired-details)
-(dired-details-install)
+;; (require 'dired-details)
+;; (dired-details-install)
 
 ;; Nice listing
 (setq find-ls-option '("-print0 | xargs -0 ls -alhd" . ""))

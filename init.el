@@ -54,9 +54,9 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Inconsolata"
-                    :height 220
-                    :weight 'regular)
+                    :font "SF Mono"
+                    :height 250
+                    :weight 'medium)
 
 
 (defun toggle-selective-display (column)

@@ -38,6 +38,13 @@
 ;; robe
 (add-hook 'enh-ruby-mode-hook 'robe-mode)
 (add-hook 'enh-ruby-mode-hook 'robe-mode)
+(global-robe-mode)
+(eval-after-load 'company
+  '(push 'company-robe company-backends))
+(custom-set-variables
+ '(robe-completing-read-func 'helm-robe-completing-read))
+(require 'auto-complete)
+(add-hook 'robe-mode-hook 'ac-robe-setup)
 
 
 ;; Bundler
