@@ -40,6 +40,8 @@
 (add-to-list 'projectile-globally-ignored-directories "node_modules")
 (add-to-list 'projectile-globally-ignored-directories ".cask")
 (setq projectile-use-git-grep t)
+(projectile-rails-global-mode)
+(setq projectile-project-search-path '("~/Projects/")
 
 ;; pallet
 (require 'pallet)
@@ -54,6 +56,11 @@
 ;; ido
 (ido-mode 1)
 (ido-vertical-mode 1)
+(require 'flx-ido)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-enable-flex-matching t)
+(setq ido-use-faces nil)
 
 ;; magit
 (defvar magit-last-seen-setup-instructions "1.4.0")
