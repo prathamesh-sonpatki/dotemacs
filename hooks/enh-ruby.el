@@ -62,6 +62,11 @@
 (require 'rbenv)
 (global-rbenv-mode)
 
+;; rspec mode
+(require 'rspec-mode)
+(add-hook 'after-init-hook 'inf-ruby-switch-setup)
+(setq compilation-scroll-output t)
+
 ;; Avoid conflicts with rspec-mode
 (add-hook 'minitest-mode-hook (lambda () (rspec-verifiable-mode -1)))
 
