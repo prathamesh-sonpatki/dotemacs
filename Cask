@@ -212,6 +212,7 @@
 (depends-on "tablist")
 (depends-on "toml-mode")
 (depends-on "transient")
+(depends-on "typescript-mode")
 (depends-on "ujelly-theme")
 (depends-on "use-package")
 (depends-on "w3m")

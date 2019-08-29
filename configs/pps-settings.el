@@ -41,7 +41,7 @@
 (add-to-list 'projectile-globally-ignored-directories ".cask")
 (setq projectile-use-git-grep t)
 (projectile-rails-global-mode)
-(setq projectile-project-search-path '("~/Projects/")
+(setq projectile-project-search-path '("~/Projects/"))
 
 ;; pallet
 (require 'pallet)
