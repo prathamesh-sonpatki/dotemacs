@@ -35,3 +35,4 @@ network-security.data
 transient/
 configs/flycheck_pps-settings.el
 ido.last
+rake.cache
