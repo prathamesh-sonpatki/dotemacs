@@ -87,5 +87,6 @@
 
 (setq-default show-trailing-whitespace t)
 ;; (desktop-save-mode 1)
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 ;;; init.el ends here
