@@ -19,7 +19,7 @@
 (require 'cl) ; If you don't have it already
 
 ;; add rubocop - Ruby static code analyzer
-(add-hook 'enh-ruby-mode-hook 'rubocop-mode)
+;; (add-hook 'enh-ruby-mode-hook 'rubocop-mode)
 
 ;; Ruby mode hook
 (add-hook 'enh-ruby-mode-hook '(lambda ()
@@ -56,7 +56,7 @@
 (require 'bundler)
 
 ;; add rubocop - Ruby static code analyzer
-(add-hook 'enh-ruby-mode-hook 'rubocop-mode)
+;; (add-hook 'enh-ruby-mode-hook 'rubocop-mode)
 
 ;;rbnenv
 (require 'rbenv)

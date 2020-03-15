@@ -180,6 +180,7 @@
 (depends-on "queue")
 (depends-on "racket-mode")
 (depends-on "rainbow-delimiters")
+(depends-on "rainbow-mode")
 (depends-on "rake")
 (depends-on "rbenv")
 (depends-on "react-snippets")

@@ -17,12 +17,7 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 
 (setq org-agenda-files (quote ("~/org"
-                               "~/org/bigbinary"
-                               "~/org/bigbinary/cloudlogistics"
-                               "~/org/bigbinary/numberf"
-                               "~/org/bigbinary/misc"
-                               "~/org/personal"
-                               "~/org/personal/rails")))
+                               "~/org/personal.org")))
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "WAITING(w@/!)" "HOLD(h@/!)" "In Progress(p)" "DONE(d)")
@@ -580,8 +575,7 @@ Skip project and sub-project tasks, habits, and loose non-project tasks."
       next-headline)))
 
 ; Tags with fast selection keys
-(setq org-tag-alist (quote (("rails" . ?r)
-                            ("opensource" . ?o)
+(setq org-tag-alist (quote (("opensource" . ?o)
                             ("read" . ?R)
                             ("WAITING" . ?w)
                             ("HOLD" . ?h)

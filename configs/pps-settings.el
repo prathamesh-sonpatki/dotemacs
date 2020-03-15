@@ -6,11 +6,11 @@
 ;;; Code:
 
 ;; Theme
-;; (load-theme 'leuven)
+(load-theme 'leuven)
 ;; (load-theme 'dracula)
 ;; (load-theme 'zenburn)
 ;; (load-theme 'gruvbox)
-(load-theme 'monokai)
+;; (load-theme 'monokai)
 ;; (load-theme 'dichromacy)
 ;; (load-theme 'tango-light)
 
