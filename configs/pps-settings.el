@@ -31,6 +31,7 @@
 (setq projectile-keymap-prefix (kbd "C-c p"))
 (require 'projectile)
 (require 'grizzl)
+(require 'autoinsert)
 (projectile-mode 1)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 (setq projectile-enable-caching t)
