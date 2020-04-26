@@ -4,7 +4,13 @@
 
 ;;; Code:
 
+;;; Workaround to fix SSL issue while downloading packages
+(require 'gnutls)
+(add-to-list 'gnutls-trustfiles "/usr/local/etc/openssl/cert.pem")
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.2")
+
 ;; initialize cask
+
 (require 'cask "~/.cask/cask.el")
 
 (cask-initialize)
@@ -55,7 +61,7 @@
 ;; Font
 (set-face-attribute 'default nil
                     :font "Inconsolata"
-                    :height 250
+                    :height 300
                     :weight 'regular)
 
 
@@ -87,6 +93,5 @@
 
 (setq-default show-trailing-whitespace t)
 ;; (desktop-save-mode 1)
-(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 ;;; init.el ends here
