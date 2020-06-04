@@ -92,6 +92,8 @@
 (setq backup-directory-alist `(("." . "~/.saves")))
 
 (setq-default show-trailing-whitespace t)
+
+(setq large-file-warning-threshold 50000)
 ;; (desktop-save-mode 1)
 
 ;;; init.el ends here
