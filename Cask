@@ -225,7 +225,6 @@
 (depends-on "toml-mode")
 (depends-on "transient")
 (depends-on "treepy")
-(depends-on "typescript-mode")
 (depends-on "ujelly-theme")
 (depends-on "undo-tree")
 (depends-on "use-package")
