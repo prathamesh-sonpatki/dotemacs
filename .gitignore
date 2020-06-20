@@ -36,3 +36,4 @@ transient/
 configs/flycheck_pps-settings.el
 ido.last
 rake.cache
+places/

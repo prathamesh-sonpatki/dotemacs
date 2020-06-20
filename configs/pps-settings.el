@@ -6,7 +6,7 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'leuven)
+;; (load-theme 'leuven)
 ;; (load-theme 'dracula)
 ;; (load-theme 'zenburn)
 ;; (load-theme 'gruvbox)
@@ -312,6 +312,9 @@
 
 ;; Set default browser as default OS X browser
 (setq browse-url-browser-function 'browse-url-default-macosx-browser)
+
+;; https://www.emacswiki.org/emacs/SavePlace
+(save-place-mode 1)
 
 (provide 'pps-settings)
 ;;; pps-settings ends here
