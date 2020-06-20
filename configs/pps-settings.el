@@ -316,5 +316,14 @@
 ;; https://www.emacswiki.org/emacs/SavePlace
 (save-place-mode 1)
 
+;; better-defaults https://github.com/technomancy/better-defaults/blob/fc9a03138c959f0d24301c6401f800eb6e7d3af9/better-defaults.el#L79
+(setq save-interprogram-paste-before-kill t
+      apropos-do-all t
+      mouse-yank-at-point t
+      require-final-newline t
+      visible-bell t
+      load-prefer-newer t
+      ediff-window-setup-function 'ediff-setup-windows-plain)
+
 (provide 'pps-settings)
 ;;; pps-settings ends here
