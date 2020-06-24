@@ -60,8 +60,8 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Inconsolata"
-                    :height 300
+                    :font "Office Code Pro D"
+                    :height 200
                     :weight 'regular)
 
 

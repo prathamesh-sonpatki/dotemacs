@@ -12,7 +12,7 @@
 (add-to-list 'auto-mode-alist '("Appraisals" . ruby-mode))
 
 (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
-
+(setq enh-ruby-program "/Users/prathamesh/.rbenv/versions/2.6.5/bin/ruby")
 (setq enh-ruby-bounce-deep-indent t)
 (setq enh-ruby-hanging-brace-indent-level 2)
 
@@ -36,7 +36,6 @@
 (add-hook 'after-init-hook 'inf-ruby-switch-setup)
 
 ;; robe
-(add-hook 'enh-ruby-mode-hook 'robe-mode)
 (add-hook 'enh-ruby-mode-hook 'robe-mode)
 (global-robe-mode)
 (eval-after-load 'company
