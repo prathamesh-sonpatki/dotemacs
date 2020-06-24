@@ -64,6 +64,7 @@
 (setq ido-use-faces nil)
 
 ;; magit
+(require 'magit)
 (defvar magit-last-seen-setup-instructions "1.4.0")
 
 ;; https://endlessparentheses.com/create-github-prs-from-emacs-with-magit.html
