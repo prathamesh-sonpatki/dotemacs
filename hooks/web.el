@@ -16,7 +16,7 @@
 (add-to-list 'auto-mode-alist '("\\.scss\\'"   . web-mode))       ;; SCSS
 (add-to-list 'auto-mode-alist '("\\.php\\'"   . web-mode))        ;; PHP
 (add-to-list 'auto-mode-alist '("\\.blade\\.php\\'" . web-mode))  ;; Blade template
-(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))          ;; Typescript
+(add-to-list 'auto-mode-alist '("\\.ts[x]?\\'" . web-mode))          ;; Typescript
 
 (setq web-mode-content-types-alist
       '(("jsx" . "\\.js[x]?\\'")
