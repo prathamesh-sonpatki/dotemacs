@@ -9,7 +9,8 @@
 ;; (load-theme 'leuven)
 ;; (load-theme 'dracula)
 ;; (load-theme 'zenburn)
-(load-theme 'gruvbox)
+;; (load-theme 'gruvbox)
+(load-theme 'vscode-dark-plus)
 ;; (load-theme 'monokai)
 ;; (load-theme 'dichromacy)
 ;; (load-theme 'tango-light)
@@ -28,10 +29,10 @@
   (when (fboundp mode) (funcall mode -1)))
 
 ;; projectile
-(setq projectile-keymap-prefix (kbd "C-c p"))
 (require 'projectile)
 (require 'grizzl)
 (require 'autoinsert)
+(setq projectile-keymap-prefix (kbd "C-c p"))
 (projectile-mode 1)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 (setq projectile-enable-caching t)

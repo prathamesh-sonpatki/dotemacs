@@ -16,15 +16,15 @@
 (cask-initialize)
 (package-initialize)
 
+;; Fix load path
+(require 'exec-path-from-shell)
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 (exec-path-from-shell-copy-env "GPG_TTY")
 (exec-path-from-shell-copy-env "GIT_MERGE_AUTOEDIT")
 (exec-path-from-shell-copy-env "GOPATH")
 (exec-path-from-shell-copy-env "BUNDLER_EDITOR")
 (exec-path-from-shell-copy-env "ANDROID_HOME")
-
-;; Fix load path
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
 
 (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
@@ -60,7 +60,7 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Office Code Pro D"
+                    :font "Menlo"
                     :height 200
                     :weight 'regular)
 
@@ -94,6 +94,22 @@
 (setq-default show-trailing-whitespace t)
 
 (setq large-file-warning-threshold 50000)
+
+                                         (defun right-region (from to)
+            "Right-justify each nonblank line starting in the region."
+                                                     (interactive "r")
+                                                       (if (> from to)
+                                                       (let ((tem to))
+                                             (setq to from from tem)))
+                                                       (save-excursion
+                                                     (save-restriction
+                                            (narrow-to-region from to)
+                                                      (goto-char from)
+                                                   (while (not (eobp))
+                (or (save-excursion (skip-chars-forward " \t") (eolp))
+        ;;    (center-line))              ; this was the original code
+                 (justify-current-line 'right)) ; this is the new code
+                                                  (forward-line 1)))))
 ;; (desktop-save-mode 1)
 
 ;;; init.el ends here
