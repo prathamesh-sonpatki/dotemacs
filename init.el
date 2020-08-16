@@ -60,8 +60,8 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Menlo"
-                    :height 200
+                    :font "Fantasque Sans Mono"
+                    :height 250
                     :weight 'regular)
 
 
