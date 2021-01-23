@@ -10,7 +10,7 @@
 ;; (load-theme 'dracula)
 ;; (load-theme 'zenburn)
 ;; (load-theme 'gruvbox)
-(load-theme 'vscode-dark-plus)
+;; (load-theme 'vscode-dark-plus)
 ;; (load-theme 'monokai)
 ;; (load-theme 'dichromacy)
 ;; (load-theme 'tango-light)

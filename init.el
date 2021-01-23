@@ -7,7 +7,7 @@
 ;;; Workaround to fix SSL issue while downloading packages
 (require 'gnutls)
 (add-to-list 'gnutls-trustfiles "/usr/local/etc/openssl/cert.pem")
-(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.2")
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 ;; initialize cask
 
@@ -60,10 +60,9 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Fantasque Sans Mono"
-                    :height 250
-                    :weight 'regular)
-
+                    :font "PT Mono"
+                    :height 120
+                    )
 
 (defun toggle-selective-display (column)
   (interactive "P")
@@ -95,21 +94,24 @@
 
 (setq large-file-warning-threshold 50000)
 
-                                         (defun right-region (from to)
-            "Right-justify each nonblank line starting in the region."
-                                                     (interactive "r")
-                                                       (if (> from to)
-                                                       (let ((tem to))
-                                             (setq to from from tem)))
-                                                       (save-excursion
-                                                     (save-restriction
-                                            (narrow-to-region from to)
-                                                      (goto-char from)
-                                                   (while (not (eobp))
-                (or (save-excursion (skip-chars-forward " \t") (eolp))
-        ;;    (center-line))              ; this was the original code
-                 (justify-current-line 'right)) ; this is the new code
-                                                  (forward-line 1)))))
+(defun right-region (from to)
+  "Right-justify each nonblank line starting in the region."
+  (interactive "r")
+  (if (> from to)
+      (let ((tem to))
+        (setq to from from tem)))
+  (save-excursion
+    (save-restriction
+      (narrow-to-region from to)
+      (goto-char from)
+      (while (not (eobp))
+        (or (save-excursion (skip-chars-forward " \t") (eolp))
+            ;;    (center-line))              ; this was the original code
+            (justify-current-line 'right)) ; this is the new code
+        (forward-line 1)))))
 ;; (desktop-save-mode 1)
+
+(eval-after-load "sql"
+  '(load-library "sql-indent"))
 
 ;;; init.el ends here
