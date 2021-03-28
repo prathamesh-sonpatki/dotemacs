@@ -1,10 +1,7 @@
 (require 'package) ; required for emacs23
 
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
 
 (defun auto-package-init ()
   (message "Running package-initialize...")

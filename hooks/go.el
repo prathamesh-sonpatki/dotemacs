@@ -20,9 +20,6 @@
 
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 
-(autoload 'helm-godoc "helm-godoc" nil t)
-(define-key go-mode-map (kbd "C-c C-d") 'helm-godoc)
-
 (require 'go-eldoc)
 (add-hook 'go-mode-hook 'go-eldoc-setup)
 
@@ -30,3 +27,6 @@
 (add-hook 'go-mode-hook (lambda ()
   (set (make-local-variable 'company-backends) '(company-go))
   (company-mode)))
+
+(add-to-list 'load-path (concat (getenv "GOPATH")  "/src/golang.org/x/lint/misc/emacs/"))
+(require 'golint)

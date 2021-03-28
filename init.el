@@ -60,8 +60,8 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "PT Mono"
-                    :height 120
+                    :font "Anonymous Pro"
+                    :height 180
                     )
 
 (defun toggle-selective-display (column)

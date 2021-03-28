@@ -41,8 +41,8 @@
 (eval-after-load 'company
   '(push 'company-robe company-backends))
 (custom-set-variables
- '(robe-completing-read-func 'helm-robe-completing-read))
-(require 'auto-complete)
+
+ (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
 (setq ac-ignore-case nil)
