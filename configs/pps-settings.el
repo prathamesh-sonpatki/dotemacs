@@ -315,7 +315,7 @@
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq ivy-count-format "(%d/%d) ")
-
+(setq projectile-completion-system 'ivy)
 (setq enable-recursive-minibuffers t)
 ;; enable this if you want `swiper' to use it
 (setq search-default-mode #'char-fold-to-regexp)
@@ -344,7 +344,7 @@
 (global-set-key (kbd "C-c m") 'counsel-linux-app)
 (global-set-key (kbd "C-c n") 'counsel-fzf)
 (global-set-key (kbd "C-x l") 'counsel-locate)
-(global-set-key (kbd "C-c J") 'counsel-file-jump
+(global-set-key (kbd "C-c J") 'counsel-file-jump)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "C-c b") 'counsel-bookmark)
 (global-set-key (kbd "C-c d") 'counsel-descbinds)

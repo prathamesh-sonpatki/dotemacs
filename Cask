@@ -161,7 +161,6 @@
 (depends-on "osx-clipboard")
 (depends-on "outorg")
 (depends-on "outshine")
-(depends-on "package-build")
 (depends-on "pallet")
 (depends-on "paradox")
 (depends-on "paredit")

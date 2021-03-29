@@ -40,9 +40,8 @@
 (global-robe-mode)
 (eval-after-load 'company
   '(push 'company-robe company-backends))
-(custom-set-variables
 
- (require 'auto-complete)
+(require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
 (setq ac-ignore-case nil)

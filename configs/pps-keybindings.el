@@ -37,10 +37,6 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c l") 'org-store-link)
 
-;; Bundler
-(global-set-key (kbd "C-c b i") 'bundle-install)
-(global-set-key (kbd "C-c b o") 'bundle-open)
-
 
 ;; Projectile
 ;; Press Command-p for fuzzy find in project
