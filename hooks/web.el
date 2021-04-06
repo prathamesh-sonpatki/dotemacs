@@ -55,4 +55,13 @@
 
 (require 'react-snippets)
 
+(require 'prettier-js)
+(add-hook 'js2-mode-hook 'prettier-js-mode)
+(add-hook 'web-mode-hook 'prettier-js-mode)
+
+(add-hook 'web-mode-hook #'(lambda ()
+                            (enable-minor-mode
+                             '("\\.jsx?\\'" . prettier-js-mode)
+                             '("\\.tsx?\\'" . prettier-js-mode))))
+
 ;;; web.el ends here

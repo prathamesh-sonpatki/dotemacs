@@ -60,8 +60,8 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Anonymous Pro"
-                    :height 180
+                    :font "Source Code Pro Black"
+                    :height 220
                     )
 
 (defun toggle-selective-display (column)

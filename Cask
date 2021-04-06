@@ -170,6 +170,7 @@
 (depends-on "pkg-info")
 (depends-on "popup")
 (depends-on "posframe")
+(depends-on "prettier")
 (depends-on "prettier-js")
 (depends-on "projectile")
 (depends-on "projectile-rails")
