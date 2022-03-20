@@ -22,7 +22,6 @@
   (exec-path-from-shell-initialize))
 (exec-path-from-shell-copy-env "GPG_TTY")
 (exec-path-from-shell-copy-env "GIT_MERGE_AUTOEDIT")
-(exec-path-from-shell-copy-env "GOPATH")
 (exec-path-from-shell-copy-env "BUNDLER_EDITOR")
 (exec-path-from-shell-copy-env "ANDROID_HOME")
 
@@ -60,8 +59,8 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Source Code Pro Black"
-                    :height 220
+                    :font "Inconsolata"
+                    :height 190
                     )
 
 (defun toggle-selective-display (column)

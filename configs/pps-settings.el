@@ -55,6 +55,46 @@
 ;; rjsx-mode
 (require 'rjsx-mode)
 
+(defun setup-tide-mode ()
+  (interactive)
+  (tide-setup)
+  (flycheck-mode +1)
+  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (eldoc-mode +1)
+  (tide-hl-identifier-mode +1)
+  ;; company is an optional dependency. You have to
+  ;; install it separately via package-install
+  ;; `M-x package-install [ret] company`
+  (company-mode +1))
+
+;; aligns annotation to the right hand side
+(setq company-tooltip-align-annotations t)
+
+;; ;; formats the buffer before saving
+;; (add-hook 'before-save-hook 'tide-format-before-save)
+
+;; (add-hook 'typescript-mode-hook #'setup-tide-mode)
+;; (add-hook 'web-mode-hook
+;;           (lambda ()
+;;             (when (string-equal "tsx" (file-name-extension buffer-file-name))
+;;               (setup-tide-mode))))
+;; ;; enable typescript-tslint checker
+;; (flycheck-add-mode 'typescript-tslint 'web-mode)
+
+;; (add-hook 'js2-mode-hook #'setup-tide-mode)
+;; ;; configure javascript-tide checker to run after your default javascript checker
+;; (flycheck-add-next-checker 'javascript-eslint 'javascript-tide 'append)
+
+;; (add-hook 'web-mode-hook
+;;           (lambda ()
+;;             (when (string-equal "jsx" (file-name-extension buffer-file-name))
+;;               (setup-tide-mode))))
+;; ;; configure jsx-tide checker to run after your default jsx checker
+;; (flycheck-add-mode 'javascript-eslint 'web-mode)
+;; (flycheck-add-next-checker 'javascript-eslint 'jsx-tide 'append)
+
+
+
 ;; ido
 (ido-mode 1)
 (ido-vertical-mode 1)
@@ -277,7 +317,6 @@
 (add-hook 'flycheck-mode-hook 'flycheck-elm-setup)
 (with-eval-after-load 'company
   (add-to-list 'company-backends 'company-elm))
-(add-hook 'elm-mode-hook #'elm-oracle-setup-completion)
 (add-hook 'elm-mode-hook
           (lambda ()
             (setq company-backends '(company-elm))))
@@ -324,11 +363,27 @@
         (t . ivy--regex-plus)))
 (setq ivy-use-selectable-prompt t)
 
-(defun enable-minor-mode (my-pair)
-  "Enable minor mode if filename match the regexp.  MY-PAIR is a cons cell (regexp . minor-mode)."
-  (if (buffer-file-name)
-      (if (string-match (car my-pair) buffer-file-name)
-          (funcall (cdr my-pair)))))
+;; (defun enable-minor-mode (my-pair)
+;;   "Enable minor mode if filename match the regexp.  MY-PAIR is a cons cell (regexp . minor-mode)."
+;;   (if (buffer-file-name)
+;;       (if (string-match (car my-pair) buffer-file-name)
+;;           (funcall (cdr my-pair)))))
+
+;; lsp mode
+(setq lsp-use-plists t)
+(byte-recompile-directory (expand-file-name "/Users/prathamesh/.emacs.d/.cask/27.2/elpa") 0)
+(setq gc-cons-threshold 100000000)
+
+(setq read-process-output-max (* 1024 1024)) ;; 1mb
+(require 'lsp-mode)
+(add-hook 'prog-mode-hook #'lsp-deferred)
+
+(set-fill-column 80)
+(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
+
+
+;; Open large files
+(require 'vlf-setup)
 
 (provide 'pps-settings)
 ;;; pps-settings ends here
