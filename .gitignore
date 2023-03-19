@@ -39,3 +39,9 @@ rake.cache
 places/
 .cache/treemacs-persist
 recentf
+*.db
+.cache/
+.lsp*
+*.log
+projects
+straight/
