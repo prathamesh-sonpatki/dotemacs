@@ -595,4 +595,10 @@ Skip project and sub-project tasks, habits, and loose non-project tasks."
 
 (setq org-agenda-span 'day)
 
+(require 'org-roam)
+(make-directory "~/org/roam" 1)
+(setq org-roam-directory (file-truename "~/org/roam"))
+(setq org-roam-v2-ack t)
+(org-roam-db-autosync-mode)
 (provide 'pps-org)
+;;; pps-org.el ends here

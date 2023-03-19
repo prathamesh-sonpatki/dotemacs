@@ -4,6 +4,23 @@
 
 ;;; Code:
 
+;; Setup straight.el https://github.com/radian-software/straight.el
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 6))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+(straight-use-package 'use-package)
+
+(setq package-enable-at-startup nil)
+
 ;;; Workaround to fix SSL issue while downloading packages
 (require 'gnutls)
 (add-to-list 'gnutls-trustfiles "/usr/local/etc/openssl/cert.pem")
@@ -14,7 +31,6 @@
 (require 'cask "~/.cask/cask.el")
 
 (cask-initialize)
-(package-initialize)
 
 ;; Fix load path
 (require 'exec-path-from-shell)
@@ -40,6 +56,20 @@
 (defvar hooks-dir (concat root-dir "/hooks"))
 (defvar logs-dir (concat root-dir "/logs"))
 
+;; GitHub Copilot setup
+(use-package copilot
+  :straight (:host github :repo "zerolfx/copilot.el" :files ("dist" "*.el"))
+  :ensure t)
+
+(add-hook 'prog-mode-hook 'copilot-mode)
+
+(with-eval-after-load 'company
+  ;; disable inline previews
+  (delq 'company-preview-if-just-one-frontend company-frontends))
+
+(define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
+(define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
+
 ;; load configs
 (add-to-list 'load-path configs-dir)
 
@@ -59,8 +89,8 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Inconsolata"
-                    :height 190
+                    :font "Rec Mono Linear"
+                    :height 200
                     )
 
 (defun toggle-selective-display (column)
@@ -112,5 +142,13 @@
 
 (eval-after-load "sql"
   '(load-library "sql-indent"))
+
+(defun file-notify-rm-all-watches ()
+  "Remove all existing file notification watches from Emacs."
+  (interactive)
+  (maphash
+   (lambda (key _value)
+     (file-notify-rm-watch key))
+   file-notify-descriptors))
 
 ;;; init.el ends here
