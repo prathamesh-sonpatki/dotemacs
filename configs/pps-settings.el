@@ -46,8 +46,8 @@
 (setq projectile-project-search-path '("~/Projects/"))
 
 ;; pallet
-(require 'pallet)
-(pallet-mode t)
+;; (require 'pallet)
+;; (pallet-mode t)
 
 ;; web-mode
 (require 'web-mode)

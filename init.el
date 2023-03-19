@@ -33,13 +33,13 @@
 (cask-initialize)
 
 ;; Fix load path
-(require 'exec-path-from-shell)
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
-(exec-path-from-shell-copy-env "GPG_TTY")
-(exec-path-from-shell-copy-env "GIT_MERGE_AUTOEDIT")
-(exec-path-from-shell-copy-env "BUNDLER_EDITOR")
-(exec-path-from-shell-copy-env "ANDROID_HOME")
+;; (require 'exec-path-from-shell)
+;; (when (memq window-system '(mac ns x))
+;;   (exec-path-from-shell-initialize))
+;; (exec-path-from-shell-copy-env "GPG_TTY")
+;; (exec-path-from-shell-copy-env "GIT_MERGE_AUTOEDIT")
+;; (exec-path-from-shell-copy-env "BUNDLER_EDITOR")
+;; (exec-path-from-shell-copy-env "ANDROID_HOME")
 
 (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
@@ -89,7 +89,7 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :font "Rec Mono Linear"
+                    :font "Iosevka Curly"
                     :height 200
                     )
 
